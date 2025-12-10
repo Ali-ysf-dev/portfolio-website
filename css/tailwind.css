@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #3B82F6; /* blue-500 */
+  --color-primary-50: #EFF6FF; /* blue-50 */
+  --color-primary-100: #DBEAFE; /* blue-100 */
+  --color-primary-500: #3B82F6; /* blue-500 */
+  --color-primary-600: #2563EB; /* blue-600 */
+  --color-primary-700: #1D4ED8; /* blue-700 */
+  
+  /* Secondary Colors */
+  --color-secondary: #6366F1; /* indigo-500 */
+  --color-secondary-50: #EEF2FF; /* indigo-50 */
+  --color-secondary-100: #E0E7FF; /* indigo-100 */
+  --color-secondary-500: #6366F1; /* indigo-500 */
+  --color-secondary-600: #4F46E5; /* indigo-600 */
+  
+  /* Accent Colors */
+  --color-accent: #10B981; /* emerald-500 */
+  --color-accent-50: #ECFDF5; /* emerald-50 */
+  --color-accent-100: #D1FAE5; /* emerald-100 */
+  --color-accent-500: #10B981; /* emerald-500 */
+  
+  /* Background Colors */
+  --color-background: #0F172A; /* slate-900 */
+  --color-background-light: #FFFFFF; /* white */
+  
+  /* Surface Colors */
+  --color-surface: #1E293B; /* slate-800 */
+  --color-surface-light: #F8FAFC; /* slate-50 */
+  --color-surface-hover: #334155; /* slate-700 */
+  
+  /* Text Colors */
+  --color-text-primary: #F8FAFC; /* slate-50 */
+  --color-text-primary-light: #0F172A; /* slate-900 */
+  --color-text-secondary: #94A3B8; /* slate-400 */
+  --color-text-secondary-light: #64748B; /* slate-500 */
+  
+  /* Status Colors */
+  --color-success: #22C55E; /* green-500 */
+  --color-success-50: #F0FDF4; /* green-50 */
+  --color-success-100: #DCFCE7; /* green-100 */
+  
+  --color-warning: #F59E0B; /* amber-500 */
+  --color-warning-50: #FFFBEB; /* amber-50 */
+  --color-warning-100: #FEF3C7; /* amber-100 */
+  
+  --color-error: #EF4444; /* red-500 */
+  --color-error-50: #FEF2F2; /* red-50 */
+  --color-error-100: #FEE2E2; /* red-100 */
+  
+  /* Border Colors */
+  --color-border: #334155; /* slate-700 */
+  --color-border-light: #E2E8F0; /* slate-200 */
+  
+  /* Shadow Colors */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Light mode shadows */
+  --shadow-sm-light: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg-light: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl-light: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Light theme overrides */
+[data-theme="light"] {
+  --color-background: #FFFFFF; /* white */
+  --color-surface: #F8FAFC; /* slate-50 */
+  --color-surface-hover: #F1F5F9; /* slate-100 */
+  --color-text-primary: #0F172A; /* slate-900 */
+  --color-text-secondary: #64748B; /* slate-500 */
+  --color-border: #E2E8F0; /* slate-200 */
+}
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    transition: background-color 300ms ease-out, color 300ms ease-out;
+  }
+  
+  /* Touch targets minimum 44px */
+  button, a, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Focus styles for accessibility */
+  *:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* Component styles */
+@layer components {
+  .card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+    transition: all 200ms ease-out;
+  }
+  
+  .card:hover {
+    background-color: var(--color-surface-hover);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+  
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 200ms ease-out;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-primary-600);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .btn-secondary {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 200ms ease-out;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--color-secondary-600);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Animation utilities */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Code styling */
+  .code {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--color-surface);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+  
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .shadow-custom-sm {
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .shadow-custom-md {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-custom-lg {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .shadow-custom-xl {
+    box-shadow: var(--shadow-xl);
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Frontend Developer</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <meta name="description" content="Professional frontend developer portfolio showcasing modern web development skills and projects" />
+    <meta name="theme-color" content="#3B82F6" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Faliportfo1513back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-background text-text-primary">
+    
+
+    <script>
+        
+
+        function redirectToPage(pageName) {
+            // Add fade out animation before redirect
+            document.body.style.opacity = '0';
+            document.body.style.transform = 'translateY(-20px)';
+            document.body.style.transition = 'opacity 300ms ease-out, transform 300ms ease-out';
+            
+            setTimeout(() => {
+                window.location.href = `pages/${pageName}`;
+            }, 300);
+        }
+
+        redirectToPage('home_landing_page.html');
+    </script>
+<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
+</body>
+</html>

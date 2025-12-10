@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Ali Youssef | Frontend Developer</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Faliportfo1513back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <a href="home_landing_page.html" class="text-xl font-bold text-gradient">
+                        Ali Youssef
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="home_landing_page.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Home</a>
+                        <a href="about_page.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">About</a>
+                        <a href="projects_portfolio.html" style="display: none;" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Projects</a>
+                        <a href="skills_expertise.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Skills</a>
+                        <a href="services.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Services</a>
+                        <a href="contact.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Theme Toggle & Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-surface hover:bg-surface-hover transition-colors duration-200" aria-label="Toggle theme">
+                        <svg id="sun-icon" class="w-5 h-5 text-text-secondary hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                        <svg id="moon-icon" class="w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg bg-surface hover:bg-surface-hover transition-colors duration-200" aria-label="Toggle mobile menu">
+                        <svg class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-surface rounded-lg mt-2">
+                    <a href="home_landing_page.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Home</a>
+                    <a href="about_page.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">About</a>
+                    <a href="projects_portfolio.html" style="display: none;" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Projects</a>
+                    <a href="skills_expertise.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Skills</a>
+                    <a href="services.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Services</a>
+                    <a href="contact.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-primary/20">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="fade-in">
+                <h1 class="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
+                    About <span class="text-gradient">Me</span>
+                </h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Passionate frontend developer with a love for creating beautiful, functional web experiences
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Main Content Area (7 cols on desktop) -->
+                <div class="lg:col-span-7">
+                    <!-- Professional Biography -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-text-primary mb-6">My Journey</h2>
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-text-secondary leading-relaxed mb-6">
+                                Hello! I'm Ali Youssef, a passionate frontend developer based in Berlin, Germany. 
+                                My journey into web development began during my Management Information Systems studies at Lebanese University, where I discovered 
+                                my love for creating beautiful, functional user interfaces that make a real difference in 
+                                people's lives.
+                            </p>
+                            <p class="text-text-secondary leading-relaxed mb-6">
+                                I graduated in February 2023 with a bachelor's degree in Management Information Systems and have been 
+                                freelancing as a web developer since then. My experience spans from full-stack development 
+                                to product ownership, where I've learned to balance technical excellence with business needs.
+                            </p>
+                            <p class="text-text-secondary leading-relaxed">
+                                I've had the privilege of working on diverse projects including clinic management systems, 
+                                hotel reservation platforms, and modern web applications. Each project has taught me something new 
+                                and reinforced my belief that great web development is about understanding users, solving problems, 
+                                and creating experiences that deliver real value.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Career Timeline -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-text-primary mb-8">Career Timeline</h2>
+                        <div class="relative">
+                            <!-- Timeline Line -->
+                            <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-primary/30 hidden sm:block"></div>
+                            
+                            <!-- Timeline Items -->
+                            <div class="space-y-8">
+                                <!-- Current Position -->
+                                <div class="timeline-item relative pl-0 sm:pl-12" data-expandable>
+                                    <div class="absolute left-0 top-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center hidden sm:flex">
+                                        <div class="w-3 h-3 bg-white rounded-full"></div>
+                                    </div>
+                                    <div class="card p-6 cursor-pointer hover:scale-[1.02] transition-transform duration-200">
+                                        <div class="flex items-center justify-between mb-4">
+                                            <div>
+                                                <h3 class="text-xl font-semibold text-text-primary">Web Developer (Freelancing)</h3>
+                                                <p class="text-primary font-medium">Self-Employed</p>
+                                                <p class="text-text-secondary text-sm">February 2023 - Present</p>
+                                            </div>
+                                            <svg class="w-5 h-5 text-text-secondary expand-icon transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                            </svg>
+                                        </div>
+                                        <div class="expandable-content hidden">
+                                            <p class="text-text-secondary mb-4">
+                                                Leading end-to-end development of web applications, focusing on React.js and modern web technologies.
+                                                Successfully delivered multiple projects while managing client relationships and project timelines.
+                                            </p>
+                                            <ul class="text-text-secondary space-y-2">
+                                                <li class="flex items-start">
+                                                    <span class="text-primary mr-2">•</span>
+                                                    Led end-to-end development of major projects, delivering on time and meeting all milestones
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <span class="text-primary mr-2">•</span>
+                                                    Designed and implemented new APIs, reducing load times by 25% and boosting user engagement by 15%
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <span class="text-primary mr-2">•</span>
+                                                    Created new user interfaces, increasing user satisfaction by 20% and conversion rates by 10%
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- White Stork Position -->
+                                <div class="timeline-item relative pl-0 sm:pl-12" data-expandable>
+                                    <div class="absolute left-0 top-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center hidden sm:flex">
+                                        <div class="w-3 h-3 bg-white rounded-full"></div>
+                                    </div>
+                                    <div class="card p-6 cursor-pointer hover:scale-[1.02] transition-transform duration-200">
+                                        <div class="flex items-center justify-between mb-4">
+                                            <div>
+                                                <h3 class="text-xl font-semibold text-text-primary">Product Owner</h3>
+                                                <p class="text-secondary font-medium">White Stork</p>
+                                                <p class="text-text-secondary text-sm">August 2023 - July 2024</p>
+                                            </div>
+                                            <svg class="w-5 h-5 text-text-secondary expand-icon transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                            </svg>
+                                        </div>
+                                        <div class="expandable-content hidden">
+                                            <p class="text-text-secondary mb-4">
+                                                Started as Product Owner Intern and progressed to full Product Owner role, managing product roadmaps 
+                                                and collaborating with cross-functional teams in agile environments.
+                                            </p>
+                                            <ul class="text-text-secondary space-y-2">
+                                                <li class="flex items-start">
+                                                    <span class="text-secondary mr-2">•</span>
+                                                    Led product roadmap creation and backlog prioritization aligned with Agile methodologies
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <span class="text-secondary mr-2">•</span>
+                                                    Conducted QA testing, analyzed user feedback, and wrote user stories for product improvements
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <span class="text-secondary mr-2">•</span>
+                                                    Coordinated with cross-functional teams and facilitated sprint ceremonies
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Philosophy -->
+                    <div class="card p-8">
+                        <h2 class="text-2xl font-bold text-text-primary mb-6">My Development Philosophy</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364-.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-text-primary mb-2">User-Centered Design</h3>
+                                    <p class="text-text-secondary">Every line of code should serve the user's needs and create meaningful experiences.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-text-primary mb-2">Performance First</h3>
+                                    <p class="text-text-secondary">Fast, efficient code that delivers exceptional user experiences across all devices.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-text-primary mb-2">Continuous Learning</h3>
+                                    <p class="text-text-secondary">Staying current with evolving technologies and best practices in web development.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-warning/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-text-primary mb-2">Collaborative Spirit</h3>
+                                    <p class="text-text-secondary">Great products are built by great teams working together towards common goals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar (5 cols on desktop) -->
+                <div class="lg:col-span-5">
+                    <!-- Professional Headshot -->
+                    <div class="card p-6 mb-8 hidden">
+                        <div class="text-center">
+                            <div class="relative inline-block mb-6">
+                                <img src='../assets/images/my_ai_photo.jpg' />
+                                <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-text-primary mb-2">Ali Youssef</h3>
+                            <p class="text-primary font-medium mb-4">Senior Frontend Developer</p>
+                            <p class="text-text-secondary text-sm">
+                                Crafting beautiful web experiences with modern technologies and user-centered design principles.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="card p-6 mb-8">
+                        <h3 class="text-xl font-semibold text-text-primary mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-4">
+                            <!-- Email -->
+                            <div class="flex items-center group">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-sm text-text-secondary">Email</p>
+                                    <button id="copy-email" class="text-text-primary hover:text-primary transition-colors duration-200 font-medium group-hover:underline" onclick="copyToClipboard('contact@aliyoussef.tech')">
+                                        contact@aliyoussef.tech
+                                    </button>
+                                </div>
+                                <button class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-2 hover:bg-surface-hover rounded-lg" onclick="copyToClipboard('contact@aliyoussef.tech')" title="Copy email">
+                                    <svg class="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-text-secondary">Phone</p>
+                                    <p class="text-text-primary font-medium">+49 15510628053</p>
+                                </div>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-text-secondary">Location</p>
+                                    <p class="text-text-primary font-medium">Berlin, Germany</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Statistics -->
+                    <div class="card p-6 mb-8">
+                        <h3 class="text-xl font-bold text-text-primary mb-6">Key Statistics</h3>
+                        <div class="space-y-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary mb-1">2+</div>
+                                <div class="text-text-secondary text-sm">Years Experience</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-secondary mb-1">5+</div>
+                                <div class="text-text-secondary text-sm">Projects Completed</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-accent mb-1">8+</div>
+                                <div class="text-text-secondary text-sm">Technologies Mastered</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-warning mb-1">100%</div>
+                                <div class="text-text-secondary text-sm">Client Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Proficiency -->
+                    <div class="card p-6 mb-8">
+                        <h3 class="text-xl font-bold text-text-primary mb-6">Skills Proficiency</h3>
+                        <div class="space-y-4">
+                            <!-- React -->
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-text-primary font-medium">React</span>
+                                    <span class="text-text-secondary text-sm">90%</span>
+                                </div>
+                                <div class="w-full bg-surface rounded-full h-2">
+                                    <div class="skill-bar bg-primary h-2 rounded-full" data-width="90"></div>
+                                </div>
+                            </div>
+
+                            <!-- JavaScript -->
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-text-primary font-medium">JavaScript</span>
+                                    <span class="text-text-secondary text-sm">88%</span>
+                                </div>
+                                <div class="w-full bg-surface rounded-full h-2">
+                                    <div class="skill-bar bg-secondary h-2 rounded-full" data-width="85"></div>
+                                </div>
+                            </div>
+
+                            <!-- CSS/SCSS -->
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-text-primary font-medium">CSS/SCSS</span>
+                                    <span class="text-text-secondary text-sm">95%</span>
+                                </div>
+                                <div class="w-full bg-surface rounded-full h-2">
+                                    <div class="skill-bar bg-accent h-2 rounded-full" data-width="88"></div>
+                                </div>
+                            </div>
+
+                            <!-- TypeScript -->
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-text-primary font-medium">TypeScript</span>
+                                    <span class="text-text-secondary text-sm">80%</span>
+                                </div>
+                                <div class="w-full bg-surface rounded-full h-2">
+                                    <div class="skill-bar bg-warning h-2 rounded-full" data-width="80"></div>
+                                </div>
+                            </div>
+
+                            <!-- tailwind -->
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-text-primary font-medium">Tailwind</span>
+                                    <span class="text-text-secondary text-sm">95%</span>
+                                </div>
+                                <div class="w-full bg-surface rounded-full h-2">
+                                    <div class="skill-bar bg-error h-2 rounded-full" data-width="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resume Download -->
+                    <div class="card p-6">
+                        <h3 class="text-xl font-bold text-text-primary mb-4">Get My Resume</h3>
+                        <p class="text-text-secondary mb-6 text-sm">
+                            Download my complete resume with detailed experience, education, and project information.
+                        </p>
+                        <button id="download-resume" class="btn-primary w-full flex items-center justify-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Download Resume
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-border py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-text-secondary">&#xa9; 2025 Ali Youssef. All rights reserved. Built with passion and modern web technologies.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Scroll to top on page load and navigation
+        window.addEventListener('load', function() {
+            window.scrollTo(0, 0);
+        });
+        
+        if (document.readyState === 'complete') {
+            window.scrollTo(0, 0);
+        } else {
+            window.addEventListener('load', function() {
+                window.scrollTo(0, 0);
+            });
+        }
+        
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                window.scrollTo(0, 0);
+            }
+        });
+        
+        // GSAP Page Animations - Safe implementation that doesn't hide content
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set active nav link based on current page
+            const currentPage = window.location.pathname.split('/').pop() || 'home_landing_page.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute('href');
+                if (linkHref === currentPage || (currentPage === '' && linkHref === 'home_landing_page.html')) {
+                    link.classList.add('active');
+                }
+            });
+            
+            if (typeof gsap !== 'undefined') {
+                // Register ScrollTrigger plugin if available
+                if (typeof ScrollTrigger !== 'undefined') {
+                    gsap.registerPlugin(ScrollTrigger);
+                }
+                const fadeElements = document.querySelectorAll('.fade-in');
+                fadeElements.forEach(el => {
+                    el.classList.add('gsap-ready');
+                    if (!el.classList.contains('visible')) {
+                        gsap.set(el, { opacity: 0, y: 30 });
+                    }
+                });
+                
+                if (fadeElements.length > 0) {
+                    fadeElements.forEach((el, index) => {
+                        if (!el.classList.contains('visible')) {
+                            gsap.to(el, {
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.8,
+                                delay: index * 0.1,
+                                ease: "power2.out",
+                                onComplete: function() {
+                                    el.classList.add('visible');
+                                }
+                            });
+                        } else {
+                            gsap.set(el, { opacity: 1, y: 0 });
+                        }
+                    });
+                }
+                
+                // Simple Modern Button Hover Effect
+                const buttons = document.querySelectorAll('.btn-primary, .btn-secondary');
+                buttons.forEach(button => {
+                    button.addEventListener('mouseenter', () => {
+                        gsap.to(button, {
+                            scale: 1.05,
+                            y: -2,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                    
+                    button.addEventListener('mouseleave', () => {
+                        gsap.to(button, {
+                            scale: 1,
+                            y: 0,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                });
+                
+                // Simple Card Animation - Same as Services/Contact pages
+                const cards = document.querySelectorAll('.card');
+                if (cards.length > 0) {
+                    const cardObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !entry.target.classList.contains('gsap-animated')) {
+                                gsap.from(entry.target, {
+                                    opacity: 0,
+                                    y: 30,
+                                    duration: 0.6,
+                                    ease: "power2.out",
+                                    onComplete: function() {
+                                        entry.target.classList.add('gsap-animated');
+                                    }
+                                });
+                                cardObserver.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    
+                    cards.forEach(card => {
+                        gsap.set(card, { opacity: 1, y: 0 });
+                        
+                        // Simple Modern Card Hover Effect
+                        card.addEventListener('mouseenter', () => {
+                            gsap.to(card, {
+                                y: -4,
+                                scale: 1.02,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                        });
+                        
+                        card.addEventListener('mouseleave', () => {
+                            gsap.to(card, {
+                                y: 0,
+                                scale: 1,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                        });
+                        
+                        cardObserver.observe(card);
+                    });
+                }
+                
+                // Navigation Links Hover Effect
+                const navLinks = document.querySelectorAll('nav a');
+                navLinks.forEach(link => {
+                    link.addEventListener('mouseenter', () => {
+                        gsap.to(link, {
+                            y: -2,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                    
+                    link.addEventListener('mouseleave', () => {
+                        gsap.to(link, {
+                            y: 0,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                });
+                
+                // Theme Toggle & Mobile Menu Button Hover
+                const themeToggle = document.getElementById('theme-toggle');
+                const mobileMenuBtn = document.getElementById('mobile-menu-button');
+                
+                [themeToggle, mobileMenuBtn].forEach(btn => {
+                    if (btn) {
+                        btn.addEventListener('mouseenter', () => {
+                            gsap.to(btn, {
+                                scale: 1.1,
+                                rotation: 5,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                        });
+                        
+                        btn.addEventListener('mouseleave', () => {
+                            gsap.to(btn, {
+                                scale: 1,
+                                rotation: 0,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                        });
+                    }
+                });
+                
+                // Simple Section Title Animation - Same as Services/Contact pages
+                // Exclude h1 inside fade-in divs (they use fade-in animation instead)
+                const sectionTitles = document.querySelectorAll('section h3, section h2, section h1:not(.fade-in h1)');
+                sectionTitles.forEach((title) => {
+                    // Skip if inside a fade-in container
+                    if (title.closest('.fade-in')) {
+                        return;
+                    }
+                    
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !entry.target.classList.contains('title-animated')) {
+                                gsap.from(entry.target, {
+                                    opacity: 0,
+                                    y: 30,
+                                    duration: 0.6,
+                                    ease: "power2.out",
+                                    onComplete: function() {
+                                        entry.target.classList.add('title-animated');
+                                    }
+                                });
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    
+                    observer.observe(title);
+                });
+            }
+        });
+
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to 'dark'
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', currentTheme);
+        updateThemeIcons(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcons(newTheme);
+        });
+
+        function updateThemeIcons(theme) {
+            if (theme === 'dark') {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Timeline Expandable Items
+        document.querySelectorAll('[data-expandable]').forEach(item => {
+            item.addEventListener('click', () => {
+                const content = item.querySelector('.expandable-content');
+                const icon = item.querySelector('.expand-icon');
+                
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Skills Animation on Scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-bar');
+                    skillBars.forEach(bar => {
+                        const width = bar.getAttribute('data-width');
+                        setTimeout(() => {
+                            bar.style.width = width + '%';
+                            bar.style.transition = 'width 1s ease-out';
+                        }, 200);
+                    });
+                    skillsObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe skills section
+        const skillsSection = document.querySelector('.card:has(.skill-item)');
+        if (skillsSection) {
+            skillsObserver.observe(skillsSection);
+        }
+
+        // Initialize skill bars
+        document.querySelectorAll('.skill-bar').forEach(bar => {
+            bar.style.width = '0%';
+        });
+
+        // Resume Download
+        document.getElementById('download-resume').addEventListener('click', () => {
+            // Simulate PDF download
+            const link = document.createElement('a');
+            link.href = '#'; // In a real application, this would be a PDF file
+            link.download = 'Ali_Youssef_Resume.pdf';
+            
+            // Show download notification
+            const button = document.getElementById('download-resume');
+            const originalText = button.innerHTML;
+            button.innerHTML = `
+                <svg class="w-5 h-5 mr-2 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                </svg>
+                Downloading...
+            `;
+            
+            setTimeout(() => {
+                button.innerHTML = `
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Downloaded!
+                `;
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                }, 2000);
+            }, 1500);
+        });
+
+        // Copy to clipboard function
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                // Show feedback
+                const button = document.getElementById('copy-email');
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

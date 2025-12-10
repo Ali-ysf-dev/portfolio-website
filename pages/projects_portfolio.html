@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects Portfolio - Ali Youssef</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Faliportfo1513back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <a href="home_landing_page.html" class="text-xl font-bold text-gradient">
+                        Ali Youssef
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="home_landing_page.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Home</a>
+                        <a href="about_page.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">About</a>
+                        <a href="projects_portfolio.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Projects</a>
+                        <a href="skills_expertise.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Skills</a>
+                        <a href="services.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Services</a>
+                        <a href="contact.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Theme Toggle & Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-surface hover:bg-surface-hover transition-colors duration-200" aria-label="Toggle theme">
+                        <svg id="sun-icon" class="w-5 h-5 text-text-secondary hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                        <svg id="moon-icon" class="w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg bg-surface hover:bg-surface-hover transition-colors duration-200" aria-label="Toggle mobile menu">
+                        <svg class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-surface rounded-lg mt-2">
+                    <a href="home_landing_page.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Home</a>
+                    <a href="about_page.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">About</a>
+                    <a href="projects_portfolio.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Projects</a>
+                    <a href="skills_expertise.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Skills</a>
+                    <a href="services.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Services</a>
+                    <a href="contact.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-surface/50">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
+                My <span class="text-gradient">Projects</span>
+            </h1>
+            <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+                A showcase of my development work, featuring modern web applications built with cutting-edge technologies. 
+                Each project demonstrates different aspects of my frontend expertise.
+            </p>
+        </div>
+    </section>
+
+    <!-- Search and Filters Section -->
+    <section class="py-8 px-4 sm:px-6 lg:px-8 border-b border-border">
+        <div class="max-w-7xl mx-auto">
+            <!-- Search Bar -->
+            <div class="mb-6">
+                <div class="relative max-w-md mx-auto lg:mx-0">
+                    <input type="text" id="search-input" placeholder="Search projects..." class="w-full pl-10 pr-4 py-3 bg-surface border border-border rounded-lg text-text-primary placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200" />
+                    <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                <!-- Mobile Filter Chips (Horizontal Scroll) -->
+                <div class="lg:hidden">
+                    <div class="flex space-x-3 overflow-x-auto pb-2 scrollbar-hide">
+                        <button class="filter-chip active" data-filter="all">All Projects</button>
+                        <button class="filter-chip" data-filter="react">React</button>
+                        <button class="filter-chip" data-filter="vue">Vue.js</button>
+                        <button class="filter-chip" data-filter="javascript">JavaScript</button>
+                        <button class="filter-chip" data-filter="typescript">TypeScript</button>
+                        <button class="filter-chip" data-filter="fullstack">Full Stack</button>
+                        <button class="filter-chip" data-filter="frontend">Frontend</button>
+                    </div>
+                </div>
+
+                <!-- Desktop Filter Buttons -->
+                <div class="hidden lg:flex flex-wrap gap-3">
+                    <button class="filter-chip active" data-filter="all">All Projects</button>
+                    <button class="filter-chip" data-filter="react">React</button>
+                    <button class="filter-chip" data-filter="vue">Vue.js</button>
+                    <button class="filter-chip" data-filter="javascript">JavaScript</button>
+                    <button class="filter-chip" data-filter="typescript">TypeScript</button>
+                    <button class="filter-chip" data-filter="fullstack">Full Stack</button>
+                    <button class="filter-chip" data-filter="frontend">Frontend</button>
+                </div>
+
+                <!-- Sort Dropdown -->
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <select id="sort-select" class="appearance-none bg-surface border border-border rounded-lg px-4 py-2 pr-8 text-text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200">
+                            <option value="date">Sort by Date</option>
+                            <option value="technology">Sort by Technology</option>
+                            <option value="complexity">Sort by Complexity</option>
+                            <option value="name">Sort by Name</option>
+                        </select>
+                        <svg class="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-text-secondary pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Results Count -->
+                    <span id="results-count" class="text-sm text-text-secondary whitespace-nowrap">
+                        12 projects
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Loading Skeleton (Hidden by default) -->
+            <div id="loading-skeleton" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Skeleton Cards -->
+                <div class="card animate-pulse">
+                    <div class="aspect-video bg-surface-hover rounded-t-lg"></div>
+                    <div class="p-6">
+                        <div class="h-4 bg-surface-hover rounded mb-2"></div>
+                        <div class="h-3 bg-surface-hover rounded mb-4 w-3/4"></div>
+                        <div class="flex gap-2 mb-4">
+                            <div class="h-6 bg-surface-hover rounded-full w-16"></div>
+                            <div class="h-6 bg-surface-hover rounded-full w-20"></div>
+                        </div>
+                        <div class="flex gap-2">
+                            <div class="h-8 bg-surface-hover rounded w-20"></div>
+                            <div class="h-8 bg-surface-hover rounded w-20"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- FIRDAUS WEBSITE -->
+                <div class="project-card card overflow-hidden group" data-tags="react javascript frontend freelance featured" data-date="2024-11" data-complexity="high">
+                    <div class="relative">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Firdaus Website" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        </div>
+                        <!-- Featured Badge -->
+                        <div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 rounded-full text-xs font-medium">
+                            Featured
+                        </div>
+                        <!-- Desktop Hover Overlay -->
+                        <div class="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden lg:flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <h4 class="text-lg font-semibold text-text-primary mb-2">Firdaus Website</h4>
+                                <p class="text-text-secondary text-sm mb-4">Modern website developed using React.js with improved UI/UX design and SEO optimization for enhanced user experience.</p>
+                                <div class="flex gap-2 justify-center">
+                                    <a href="#" target="_blank" class="btn-primary text-sm px-3 py-1">View Live</a>
+                                    <a href="#" target="_blank" class="btn-secondary text-sm px-3 py-1">View Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-text-primary mb-2">Firdaus Website</h4>
+                        <p class="text-text-secondary mb-4 text-sm">
+                            Modern website developed using React.js with improved UI/UX design and SEO optimization.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">React.js</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">UI/UX</span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">SEO</span>
+                            <span class="px-3 py-1 bg-warning/10 text-warning text-xs rounded-full">Responsive</span>
+                        </div>
+                        <div class="flex gap-2 lg:hidden">
+                            <a href="#" target="_blank" class="flex-1 btn-primary text-center text-sm py-2">View Live</a>
+                            <a href="#" target="_blank" class="flex-1 btn-secondary text-center text-sm py-2">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LA ROCHE Hotel Reservation System -->
+                <div class="project-card card overflow-hidden group" data-tags="vbnet sql fullstack freelance" data-date="2024-05" data-complexity="high">
+                    <div class="relative">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hotel Reservation System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/30/20/58/programming-1873854_1280.png'; this.onerror=null;" />
+                        </div>
+                        <!-- Desktop Hover Overlay -->
+                        <div class="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden lg:flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <h4 class="text-lg font-semibold text-text-primary mb-2">LA ROCHE Hotel System</h4>
+                                <p class="text-text-secondary text-sm mb-4">Complete hotel reservation system with user-friendly UI/UX interface and SQL database schemas.</p>
+                                <div class="flex gap-2 justify-center">
+                                    <a href="#" target="_blank" class="btn-primary text-sm px-3 py-1">View Project</a>
+                                    <a href="#" target="_blank" class="btn-secondary text-sm px-3 py-1">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-text-primary mb-2">LA ROCHE Hotel System</h4>
+                        <p class="text-text-secondary mb-4 text-sm">
+                            Complete hotel reservation system with user-friendly UI/UX interface and back-end functionality.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">VB.NET</span>
+                            <span class="px-3 py-1 bg-warning/10 text-warning text-xs rounded-full">SQL Database</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">UI/UX Design</span>
+                        </div>
+                        <div class="flex gap-2 lg:hidden">
+                            <a href="#" target="_blank" class="flex-1 btn-primary text-center text-sm py-2">View Project</a>
+                            <a href="#" target="_blank" class="flex-1 btn-secondary text-center text-sm py-2">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- XLR8 Medical Machine Web App -->
+                <div class="project-card card overflow-hidden group" data-tags="product-owner medical webapp scrum" data-date="2024-06" data-complexity="high">
+                    <div class="relative">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="XLR8 Medical Web App" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        </div>
+                        <!-- Desktop Hover Overlay -->
+                        <div class="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden lg:flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <h4 class="text-lg font-semibold text-text-primary mb-2">XLR8 Medical Web App</h4>
+                                <p class="text-text-secondary text-sm mb-4">Medical machine web application where I served as Product Owner, managing requirements and stakeholder collaboration.</p>
+                                <div class="flex gap-2 justify-center">
+                                    <a href="#" target="_blank" class="btn-primary text-sm px-3 py-1">View Project</a>
+                                    <a href="#" target="_blank" class="btn-secondary text-sm px-3 py-1">Case Study</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-text-primary mb-2">XLR8 Medical Web App</h4>
+                        <p class="text-text-secondary mb-4 text-sm">
+                            Medical machine web application where I served as Product Owner at White Stork.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Product Owner</span>
+                            <span class="px-3 py-1 bg-warning/10 text-warning text-xs rounded-full">Scrum</span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Medical Tech</span>
+                        </div>
+                        <div class="flex gap-2 lg:hidden">
+                            <a href="#" target="_blank" class="flex-1 btn-primary text-center text-sm py-2">View Project</a>
+                            <a href="#" target="_blank" class="flex-1 btn-secondary text-center text-sm py-2">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MEDIS Pharmacy Mobile App -->
+                <div class="project-card card overflow-hidden group" data-tags="product-owner mobile pharmacy scrum" data-date="2023-11" data-complexity="medium">
+                    <div class="relative">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="MEDIS Pharmacy App" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        </div>
+                        <!-- Desktop Hover Overlay -->
+                        <div class="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden lg:flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <h4 class="text-lg font-semibold text-text-primary mb-2">MEDIS Pharmacy App</h4>
+                                <p class="text-text-secondary text-sm mb-4">Mobile pharmacy application where I defined project requirements and managed the product backlog using Scrum methodology.</p>
+                                <div class="flex gap-2 justify-center">
+                                    <a href="#" target="_blank" class="btn-primary text-sm px-3 py-1">View Project</a>
+                                    <a href="#" target="_blank" class="btn-secondary text-sm px-3 py-1">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-text-primary mb-2">MEDIS Pharmacy App</h4>
+                        <p class="text-text-secondary mb-4 text-sm">
+                            Mobile pharmacy application where I served as Product Owner at White Stork.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Product Owner</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Mobile App</span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Pharmacy</span>
+                        </div>
+                        <div class="flex gap-2 lg:hidden">
+                            <a href="#" target="_blank" class="flex-1 btn-primary text-center text-sm py-2">View Project</a>
+                            <a href="#" target="_blank" class="flex-1 btn-secondary text-center text-sm py-2">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CLINIC WEBSITE -->
+                <div class="project-card card overflow-hidden group" data-tags="php sql fullstack graduation academic" data-date="2023-02" data-complexity="high">
+                    <div class="relative">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.pixabay.com/photo/2018/05/18/15/30/web-design-3411373_1280.jpg" alt="Clinic Management System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=2672&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        </div>
+                        <!-- Desktop Hover Overlay -->
+                        <div class="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden lg:flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <h4 class="text-lg font-semibold text-text-primary mb-2">Clinic Management System</h4>
+                                <p class="text-text-secondary text-sm mb-4">Senior graduation project featuring comprehensive clinic management with user-friendly UI/UX and SQL database implementation.</p>
+                                <div class="flex gap-2 justify-center">
+                                    <a href="#" target="_blank" class="btn-primary text-sm px-3 py-1">View Project</a>
+                                    <a href="#" target="_blank" class="btn-secondary text-sm px-3 py-1">Documentation</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-text-primary mb-2">Clinic Management System</h4>
+                        <p class="text-text-secondary mb-4 text-sm">
+                            Senior graduation project with comprehensive clinic management functionality.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-warning/10 text-warning text-xs rounded-full">PHP</span>
+                            <span class="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">SQL Database</span>
+                            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">UI/UX Design</span>
+                        </div>
+                        <div class="flex gap-2 lg:hidden">
+                            <a href="#" target="_blank" class="flex-1 btn-primary text-center text-sm py-2">View Project</a>
+                            <a href="#" target="_blank" class="flex-1 btn-secondary text-center text-sm py-2">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional projects can be added here following the same pattern -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="load-more-btn" class="btn-primary">
+                    Load More Projects
+                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-surface/50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-2xl sm:text-3xl font-bold text-text-primary mb-6">
+                Interested in Working Together?
+            </h3>
+            <p class="text-lg text-text-secondary mb-8">
+                I'm always open to discussing new opportunities and exciting projects. 
+                Let's create something amazing together.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="btn-primary">
+                    Get In Touch
+                </a>
+                <a href="mailto:ali.youssef@example.com" class="btn-secondary">
+                    Send Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-border py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-text-secondary">
+                © 2025 Ali Youssef. All rights reserved. Built with passion and modern web technologies.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Scroll to top on page load and navigation
+        window.addEventListener('load', function() {
+            window.scrollTo(0, 0);
+        });
+        
+        if (document.readyState === 'complete') {
+            window.scrollTo(0, 0);
+        } else {
+            window.addEventListener('load', function() {
+                window.scrollTo(0, 0);
+            });
+        }
+        
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                window.scrollTo(0, 0);
+            }
+        });
+        
+        // GSAP Page Animations - Safe implementation that doesn't hide content
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set active nav link based on current page
+            const currentPage = window.location.pathname.split('/').pop() || 'home_landing_page.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute('href');
+                if (linkHref === currentPage || (currentPage === '' && linkHref === 'home_landing_page.html')) {
+                    link.classList.add('active');
+                }
+            });
+            
+            if (typeof gsap !== 'undefined') {
+                // Register ScrollTrigger plugin if available
+                if (typeof ScrollTrigger !== 'undefined') {
+                    gsap.registerPlugin(ScrollTrigger);
+                }
+                const fadeElements = document.querySelectorAll('.fade-in');
+                fadeElements.forEach(el => {
+                    el.classList.add('gsap-ready');
+                    if (!el.classList.contains('visible')) {
+                        gsap.set(el, { opacity: 0, y: 30 });
+                    }
+                });
+                
+                if (fadeElements.length > 0) {
+                    fadeElements.forEach((el, index) => {
+                        if (!el.classList.contains('visible')) {
+                            gsap.to(el, {
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.8,
+                                delay: index * 0.1,
+                                ease: "power2.out",
+                                onComplete: function() {
+                                    el.classList.add('visible');
+                                }
+                            });
+                        } else {
+                            gsap.set(el, { opacity: 1, y: 0 });
+                        }
+                    });
+                }
+                
+                // Simple Card Animation - Same as Services/Contact pages
+                const projectCards = document.querySelectorAll('.card');
+                if (projectCards.length > 0) {
+                    const cardObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !entry.target.classList.contains('gsap-animated')) {
+                                gsap.from(entry.target, {
+                                    opacity: 0,
+                                    y: 30,
+                                    duration: 0.6,
+                                    ease: "power2.out",
+                                    onComplete: function() {
+                                        entry.target.classList.add('gsap-animated');
+                                    }
+                                });
+                                cardObserver.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    
+                    projectCards.forEach(card => {
+                        gsap.set(card, { opacity: 1, y: 0 });
+                        
+                        // Simple Modern Card Hover Effect
+                        card.addEventListener('mouseenter', () => {
+                            gsap.to(card, {
+                                y: -4,
+                                scale: 1.02,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                            
+                            // Animate project image
+                            const cardImage = card.querySelector('img');
+                            if (cardImage) {
+                                gsap.to(cardImage, {
+                                    scale: 1.05,
+                                    duration: 0.2,
+                                    ease: "power2.out"
+                                });
+                            }
+                        });
+                        
+                        card.addEventListener('mouseleave', () => {
+                            gsap.to(card, {
+                                y: 0,
+                                scale: 1,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                            
+                            const cardImage = card.querySelector('img');
+                            if (cardImage) {
+                                gsap.to(cardImage, {
+                                    scale: 1,
+                                    duration: 0.2,
+                                    ease: "power2.out"
+                                });
+                            }
+                        });
+                        
+                        cardObserver.observe(card);
+                    });
+                }
+                
+                // Filter Chip Hover Effect
+                const filterChips = document.querySelectorAll('.filter-chip');
+                filterChips.forEach(chip => {
+                    chip.addEventListener('mouseenter', () => {
+                        gsap.to(chip, {
+                            scale: 1.05,
+                            y: -2,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                    
+                    chip.addEventListener('mouseleave', () => {
+                        gsap.to(chip, {
+                            scale: 1,
+                            y: 0,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                });
+                
+                // Navigation Links Hover Effect
+                const navLinks = document.querySelectorAll('nav a');
+                navLinks.forEach(link => {
+                    link.addEventListener('mouseenter', () => {
+                        gsap.to(link, {
+                            y: -2,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                    
+                    link.addEventListener('mouseleave', () => {
+                        gsap.to(link, {
+                            y: 0,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                });
+                
+                // Theme Toggle & Mobile Menu Button Hover
+                const themeToggle = document.getElementById('theme-toggle');
+                const mobileMenuBtn = document.getElementById('mobile-menu-button');
+                
+                [themeToggle, mobileMenuBtn].forEach(btn => {
+                    if (btn) {
+                        btn.addEventListener('mouseenter', () => {
+                            gsap.to(btn, {
+                                scale: 1.1,
+                                rotation: 5,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                        });
+                        
+                        btn.addEventListener('mouseleave', () => {
+                            gsap.to(btn, {
+                                scale: 1,
+                                rotation: 0,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                        });
+                    }
+                });
+                
+                // Simple Modern Button Hover Effect
+                const buttons = document.querySelectorAll('.btn-primary, .btn-secondary, .filter-chip');
+                buttons.forEach(button => {
+                    button.addEventListener('mouseenter', () => {
+                        gsap.to(button, {
+                            scale: 1.05,
+                            y: -2,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                    
+                    button.addEventListener('mouseleave', () => {
+                        gsap.to(button, {
+                            scale: 1,
+                            y: 0,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                });
+                
+                // Simple Section Title Animation - Same as Services/Contact pages
+                const sectionTitles = document.querySelectorAll('section h3, section h2, section h1');
+                sectionTitles.forEach((title) => {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !entry.target.classList.contains('title-animated')) {
+                                gsap.from(entry.target, {
+                                    opacity: 0,
+                                    y: 30,
+                                    duration: 0.6,
+                                    ease: "power2.out",
+                                    onComplete: function() {
+                                        entry.target.classList.add('title-animated');
+                                    }
+                                });
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    
+                    observer.observe(title);
+                });
+            }
+        });
+
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to 'dark'
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', currentTheme);
+        updateThemeIcons(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcons(newTheme);
+        });
+
+        function updateThemeIcons(theme) {
+            if (theme === 'dark') {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Project Filtering and Search
+        const filterChips = document.querySelectorAll('.filter-chip');
+        const projectCards = document.querySelectorAll('.project-card');
+        const searchInput = document.getElementById('search-input');
+        const sortSelect = document.getElementById('sort-select');
+        const resultsCount = document.getElementById('results-count');
+        const loadingskeleton = document.getElementById('loading-skeleton');
+        const projectsGrid = document.getElementById('projects-grid');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+
+        let currentFilter = 'all';
+        let currentSort = 'date';
+        let currentSearch = '';
+
+        // Filter functionality
+        filterChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                // Remove active class from all chips
+                filterChips.forEach(c => c.classList.remove('active'));
+                // Add active class to clicked chip
+                chip.classList.add('active');
+                
+                currentFilter = chip.dataset.filter;
+                filterProjects();
+            });
+        });
+
+        // Search functionality
+        searchInput.addEventListener('input', (e) => {
+            currentSearch = e.target.value.toLowerCase();
+            filterProjects();
+        });
+
+        // Sort functionality
+        sortSelect.addEventListener('change', (e) => {
+            currentSort = e.target.value;
+            sortProjects();
+        });
+
+        function filterProjects() {
+            showLoading();
+            
+            setTimeout(() => {
+                let visibleCount = 0;
+                
+                projectCards.forEach(card => {
+                    const tags = card.dataset.tags.toLowerCase();
+                    const title = card.querySelector('h4').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    
+                    const matchesFilter = currentFilter === 'all' || tags.includes(currentFilter);
+                    const matchesSearch = currentSearch === '' || 
+                                        title.includes(currentSearch) || 
+                                        description.includes(currentSearch) ||
+                                        tags.includes(currentSearch);
+                    
+                    if (matchesFilter && matchesSearch) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                updateResultsCount(visibleCount);
+                hideLoading();
+            }, 300);
+        }
+
+        function sortProjects() {
+            const projectsArray = Array.from(projectCards);
+            
+            projectsArray.sort((a, b) => {
+                switch (currentSort) {
+                    case 'date':
+                        return new Date(b.dataset.date) - new Date(a.dataset.date);
+                    case 'name':
+                        return a.querySelector('h4').textContent.localeCompare(b.querySelector('h4').textContent);
+                    case 'complexity':
+                        const complexityOrder = { 'high': 3, 'medium': 2, 'low': 1 };
+                        return complexityOrder[b.dataset.complexity] - complexityOrder[a.dataset.complexity];
+                    case 'technology':
+                        return a.dataset.tags.localeCompare(b.dataset.tags);
+                    default:
+                        return 0;
+                }
+            });
+            
+            // Re-append sorted elements
+            projectsArray.forEach(card => {
+                projectsGrid.appendChild(card);
+            });
+        }
+
+        function showLoading() {
+            loadingskeleton.classList.remove('hidden');
+            projectsGrid.classList.add('opacity-50');
+        }
+
+        function hideLoading() {
+            loadingskeleton.classList.add('hidden');
+            projectsGrid.classList.remove('opacity-50');
+        }
+
+        function updateResultsCount(count) {
+            resultsCount.textContent = `${count} project${count !== 1 ? 's' : ''}`;
+        }
+
+        // Load More functionality (simulated)
+        loadMoreBtn.addEventListener('click', () => {
+            loadMoreBtn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Loading...
+            `;
+            
+            setTimeout(() => {
+                loadMoreBtn.innerHTML = `
+                    Load More Projects
+                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                `;
+                // In a real app, you would load more projects here
+                alert('No more projects to load!');
+            }, 1500);
+        });
+
+        // Initialize
+        updateResultsCount(projectCards.length);
+        sortProjects();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <style>
+        .filter-chip {
+            @apply px-4 py-2 bg-surface border border-border rounded-full text-sm font-medium text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-all duration-200 whitespace-nowrap cursor-pointer;
+        }
+        
+        .filter-chip.active {
+            @apply bg-primary text-white border-primary;
+        }
+        
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .project-card .group-hover\:scale-110 {
+                transform: none !important;
+            }
+        }
+    </style>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

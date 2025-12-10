@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Ali Youssef | Frontend Developer</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Faliportfo1513back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <a href="home_landing_page.html" class="text-xl font-bold text-gradient">
+                        Ali Youssef
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="home_landing_page.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Home</a>
+                        <a href="about_page.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">About</a>
+                        <a href="projects_portfolio.html" style="display: none;" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Projects</a>
+                        <a href="skills_expertise.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Skills</a>
+                        <a href="services.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Services</a>
+                        <a href="contact.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Theme Toggle & Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-surface hover:bg-surface-hover transition-colors duration-200" aria-label="Toggle theme">
+                        <svg id="sun-icon" class="w-5 h-5 text-text-secondary hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                        <svg id="moon-icon" class="w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg bg-surface hover:bg-surface-hover transition-colors duration-200" aria-label="Toggle mobile menu">
+                        <svg class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-surface rounded-lg mt-2">
+                    <a href="home_landing_page.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Home</a>
+                    <a href="about_page.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">About</a>
+                    <a href="projects_portfolio.html" style="display: none;" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Projects</a>
+                    <a href="skills_expertise.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Skills</a>
+                    <a href="services.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Services</a>
+                    <a href="contact.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-primary/20">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="fade-in">
+                <h1 class="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
+                    My <span class="text-gradient">Services</span>
+                </h1>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+                    I offer comprehensive development solutions to help bring your ideas to life. From web applications to AI-powered automations, I'm here to turn your vision into reality.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+                <!-- Web Development Service -->
+                <div class="card p-8 hover:scale-[1.02] transition-transform duration-300 group">
+                    <div class="flex items-start mb-6">
+                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mr-16 group-hover:bg-primary/20 transition-colors duration-300 flex-shrink-0" style="margin-right: 4rem;">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-text-primary mb-2">Web Development</h3>
+                            <p class="text-primary font-medium">Modern & Responsive</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-6 leading-relaxed">
+                        Create stunning, responsive websites and web applications using the latest technologies. From simple landing pages to complex web applications, I deliver high-quality solutions that work seamlessly across all devices.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            React.js & Next.js Applications
+                        </li>
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Responsive Design & Mobile-First
+                        </li>
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Performance Optimization
+                        </li>
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            SEO & Accessibility
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <span class="text-2xl font-bold text-text-primary"></span>
+                    </div>
+                </div>
+
+                <!-- AI Automations Service -->
+                <div class="card p-8 hover:scale-[1.02] transition-transform duration-300 group">
+                    <div class="flex items-start mb-6">
+                        <div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mr-16 group-hover:bg-secondary/20 transition-colors duration-300 flex-shrink-0" style="margin-right: 4rem;">
+                            <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364-.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-text-primary mb-2">AI Workflow Automations</h3>
+                            <p class="text-secondary font-medium">Smart & Efficient</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-6 leading-relaxed">
+                        Leverage the power of artificial intelligence to automate your business processes. From chatbots to data analysis, I create intelligent solutions that save time and increase efficiency.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-secondary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Custom AI Chatbots
+                        </li>
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-secondary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Process Automation
+                        </li>
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-secondary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Data Analysis & Insights
+                        </li>
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-secondary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Integration with Existing Systems
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <span class="text-2xl font-bold text-text-primary"></span>
+                    </div>
+                </div>
+
+                <!-- Desktop Applications Service -->
+                <div class="card p-8 hover:scale-[1.02] transition-transform duration-300 group">
+                    <div class="flex items-start mb-6">
+                        <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mr-16 group-hover:bg-accent/20 transition-colors duration-300 flex-shrink-0" style="margin-right: 4rem;">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-text-primary mb-2">Desktop Applications</h3>
+                            <p class="text-accent font-medium">Cross-Platform</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-6 leading-relaxed">
+                        Build powerful desktop applications that run smoothly on Windows, macOS, and Linux. Using modern frameworks to create native-feeling applications with web technologies.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-accent mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Electron Applications
+                        </li>
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-accent mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Cross-Platform Compatibility
+                        </li>
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-accent mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Native System Integration
+                        </li>
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-accent mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Offline Functionality
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <span class="text-2xl font-bold text-text-primary"></span>
+                    </div>
+                </div>
+
+                <!-- Sales Funnels Development Service -->
+                <div class="card p-8 hover:scale-[1.02] transition-transform duration-300 group">
+                    <div class="flex items-start mb-6">
+                        <div class="w-16 h-16 bg-warning/10 rounded-2xl flex items-center justify-center mr-16 group-hover:bg-warning/20 transition-colors duration-300 flex-shrink-0" style="margin-right: 4rem;">
+                            <svg class="w-8 h-8 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-text-primary mb-2">Sales Funnels Development</h3>
+                            <p class="text-warning font-medium">High Converting</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-6 leading-relaxed">
+                        Design and develop high-converting sales funnels that turn visitors into customers. From landing pages to checkout processes, I create seamless user journeys that maximize conversions.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-warning mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Landing Page Optimization
+                        </li>
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-warning mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Payment Integration
+                        </li>
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-warning mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            A/B Testing Setup
+                        </li>
+                        <li class="flex items-center text-text-secondary">
+                            <svg class="w-5 h-5 text-warning mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Analytics & Tracking
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <span class="text-2xl font-bold text-text-primary"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-primary/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="card p-8 mb-16">
+                <h2 class="text-3xl font-bold text-text-primary mb-8 text-center">My Development Process</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-primary">1</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-text-primary mb-2">Discovery</h3>
+                        <p class="text-text-secondary text-sm">Understanding your requirements and project goals</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-secondary">2</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-text-primary mb-2">Planning</h3>
+                        <p class="text-text-secondary text-sm">Creating detailed project roadmap and timeline</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-accent">3</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-text-primary mb-2">Development</h3>
+                        <p class="text-text-secondary text-sm">Building your solution with regular updates</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-warning/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-warning">4</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-text-primary mb-2">Delivery</h3>
+                        <p class="text-text-secondary text-sm">Testing, deployment, and ongoing support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-text-primary mb-6">Ready to Start Your Project?</h2>
+                <p class="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
+                    Let's discuss your project requirements and create something amazing together. I'm here to help bring your ideas to life.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="btn-primary">Get Started Today</a>
+                    <a href="projects_portfolio.html" class="btn-secondary">View My Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-border py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-text-secondary">
+                © 2025 Ali Youssef. All rights reserved. Built with passion and modern web technologies.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Scroll to top on page load and navigation
+        window.addEventListener('load', function() {
+            window.scrollTo(0, 0);
+        });
+        
+        if (document.readyState === 'complete') {
+            window.scrollTo(0, 0);
+        } else {
+            window.addEventListener('load', function() {
+                window.scrollTo(0, 0);
+            });
+        }
+        
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                window.scrollTo(0, 0);
+            }
+        });
+        
+        // GSAP Page Animations - Safe implementation that doesn't hide content
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set active nav link based on current page
+            const currentPage = window.location.pathname.split('/').pop() || 'home_landing_page.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute('href');
+                if (linkHref === currentPage || (currentPage === '' && linkHref === 'home_landing_page.html')) {
+                    link.classList.add('active');
+                }
+            });
+            
+            if (typeof gsap !== 'undefined') {
+                // Register ScrollTrigger plugin if available
+                if (typeof ScrollTrigger !== 'undefined') {
+                    gsap.registerPlugin(ScrollTrigger);
+                }
+                const fadeElements = document.querySelectorAll('.fade-in');
+                fadeElements.forEach(el => {
+                    el.classList.add('gsap-ready');
+                    if (!el.classList.contains('visible')) {
+                        gsap.set(el, { opacity: 0, y: 30 });
+                    }
+                });
+                
+                if (fadeElements.length > 0) {
+                    fadeElements.forEach((el, index) => {
+                        if (!el.classList.contains('visible')) {
+                            gsap.to(el, {
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.8,
+                                delay: index * 0.1,
+                                ease: "power2.out",
+                                onComplete: function() {
+                                    el.classList.add('visible');
+                                }
+                            });
+                        } else {
+                            gsap.set(el, { opacity: 1, y: 0 });
+                        }
+                    });
+                }
+                
+                // Simple Modern Button Hover Effect
+                const buttons = document.querySelectorAll('.btn-primary, .btn-secondary');
+                buttons.forEach(button => {
+                    button.addEventListener('mouseenter', () => {
+                        gsap.to(button, {
+                            scale: 1.05,
+                            y: -2,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                    
+                    button.addEventListener('mouseleave', () => {
+                        gsap.to(button, {
+                            scale: 1,
+                            y: 0,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                });
+                
+                const cards = document.querySelectorAll('.card');
+                if (cards.length > 0) {
+                    const cardObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !entry.target.classList.contains('gsap-animated')) {
+                                gsap.from(entry.target, {
+                                    opacity: 0,
+                                    y: 30,
+                                    duration: 0.6,
+                                    ease: "power2.out",
+                                    onComplete: function() {
+                                        entry.target.classList.add('gsap-animated');
+                                    }
+                                });
+                                cardObserver.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    
+                    cards.forEach(card => {
+                        gsap.set(card, { opacity: 1, y: 0 });
+                        
+                        // Simple Modern Card Hover Effect
+                        card.addEventListener('mouseenter', () => {
+                            gsap.to(card, {
+                                y: -4,
+                                scale: 1.02,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                            
+                            // Animate service icon
+                            const icon = card.querySelector('.w-16, .w-8');
+                            if (icon) {
+                                gsap.to(icon, {
+                                    scale: 1.1,
+                                    rotation: 5,
+                                    duration: 0.2,
+                                    ease: "power2.out"
+                                });
+                            }
+                        });
+                        
+                        card.addEventListener('mouseleave', () => {
+                            gsap.to(card, {
+                                y: 0,
+                                scale: 1,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                            
+                            const icon = card.querySelector('.w-16, .w-8');
+                            if (icon) {
+                                gsap.to(icon, {
+                                    scale: 1,
+                                    rotation: 0,
+                                    duration: 0.2,
+                                    ease: "power2.out"
+                                });
+                            }
+                        });
+                        
+                        cardObserver.observe(card);
+                    });
+                }
+                
+                // Navigation Links Hover Effect
+                const navLinks = document.querySelectorAll('nav a');
+                navLinks.forEach(link => {
+                    link.addEventListener('mouseenter', () => {
+                        gsap.to(link, {
+                            y: -2,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                    
+                    link.addEventListener('mouseleave', () => {
+                        gsap.to(link, {
+                            y: 0,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                });
+                
+                // Theme Toggle & Mobile Menu Button Hover
+                const themeToggle = document.getElementById('theme-toggle');
+                const mobileMenuBtn = document.getElementById('mobile-menu-button');
+                
+                [themeToggle, mobileMenuBtn].forEach(btn => {
+                    if (btn) {
+                        btn.addEventListener('mouseenter', () => {
+                            gsap.to(btn, {
+                                scale: 1.1,
+                                rotation: 5,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                        });
+                        
+                        btn.addEventListener('mouseleave', () => {
+                            gsap.to(btn, {
+                                scale: 1,
+                                rotation: 0,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                        });
+                    }
+                });
+            }
+        });
+
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to 'dark'
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', currentTheme);
+        updateThemeIcons(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcons(newTheme);
+        });
+
+        function updateThemeIcons(theme) {
+            if (theme === 'dark') {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fade-in Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
