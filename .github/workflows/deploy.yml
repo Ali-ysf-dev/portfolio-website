@@ -3,22 +3,22 @@ name: Deploy to Hostinger
 on:
   push:
     branches:
-      - main   # change this if your main branch is called "master"
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Deploy to Hostinger via FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4
-      with:
-        server: ${{ secrets.FTP_HOST }}
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASS }}
-        port: ${{ secrets.FTP_PORT }}
-        local-dir: ./          # folder to upload
-        server-dir: /public_html/   # hostinger folder
+      - name: FTP Deploy using ftp-action
+        uses: sebastianpopp/ftp-action@v1.3.0
+        with:
+          host: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          port: ${{ secrets.FTP_PORT }}
+          local-dir: ./
+          remote-dir: /public_html/
