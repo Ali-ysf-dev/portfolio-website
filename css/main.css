@@ -132,6 +132,7 @@
   /* 2 */
 }
 
+
 ::before,
 ::after {
   --tw-content: '';
@@ -2290,6 +2291,10 @@ button, a, input, select, textarea {
   height: auto;
   opacity: 0;
   filter: drop-shadow(0 4px 12px rgba(252, 163, 17, 0.6));
+}
+
+.signature-hero {
+  width: 300px;
 }
 
 #signature-path {
