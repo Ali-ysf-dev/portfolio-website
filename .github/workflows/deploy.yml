@@ -18,7 +18,7 @@ jobs:
           username: ${{ secrets.FTP_USER }}   # u474482489
           password: ${{ secrets.FTP_PASS }}
           port: ${{ secrets.FTP_PORT }}       # set secret to 21
-          protocol: ftp                       # or ftps if supported
+          protocol: ftps                       # or ftps if supported
           local-dir: ./
           server-dir: /public_html/
           # exclude: |
