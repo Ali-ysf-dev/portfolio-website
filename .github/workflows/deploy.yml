@@ -2,8 +2,7 @@ name: Deploy to Hostinger
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   deploy:
@@ -15,14 +14,13 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
+          server: ${{ secrets.FTP_HOST }}     # 46.202.158.169 (no ftp://)
+          username: ${{ secrets.FTP_USER }}   # u474482489
           password: ${{ secrets.FTP_PASS }}
-          port: ${{ secrets.FTP_PORT || 21 }}
-          protocol: ftp
+          port: ${{ secrets.FTP_PORT }}       # set secret to 21
+          protocol: ftp                       # or ftps if supported
           local-dir: ./
           server-dir: /public_html/
-          # optionally limit what gets uploaded:
           # exclude: |
           #   **/.git*
           #   **/node_modules/**
