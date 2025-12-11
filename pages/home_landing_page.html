@@ -84,6 +84,34 @@
                 <!-- Hero Content -->
                 <div class="flex-1 text-center lg:text-left">
                     <div class="fade-in">
+                        <!-- Signature with Real-time Signing Animation -->
+                        <div class="signature-wrapper mb-6 flex justify-center lg:justify-start" id="signature-wrapper">
+                            <svg id="signature-svg" class="signature-svg" viewBox="0 0 556 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <filter id="filter0_d_1_5" x="0" y="0" width="555.358" height="420.007" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feOffset dy="4"/>
+                                        <feGaussianBlur stdDeviation="2"/>
+                                        <feComposite in2="hardAlpha" operator="out"/>
+                                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_5"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_5" result="shape"/>
+                                    </filter>
+                                </defs>
+                                <g filter="url(#filter0_d_1_5)">
+                                    <path id="signature-path" 
+                                          d="M5.31685 399.507C7.31685 403.173 14.4168 410.507 26.8168 410.507C39.2168 410.507 45.6502 407.84 47.3168 406.507L61.8168 399.507C68.6502 396.173 84.9168 387.007 95.3168 377.007C108.317 364.507 114.317 357.507 138.317 327.007C157.517 302.607 187.65 244.173 200.317 218.007C209.317 199.007 229.717 153.607 239.317 124.007C248.917 94.4067 254.317 79.3401 255.817 75.5067L267.317 27.5067C268.984 18.6734 271.617 1.10675 268.817 1.50675C266.017 1.90675 264.317 5.67341 263.817 7.50674C260.65 14.3401 254.117 32.0067 253.317 48.0067C252.317 68.0067 250.817 64.7772 247.817 86.0067C245.417 102.99 243.484 129.083 242.817 140.007V244.507L247.317 279.007C247.817 280.84 249.317 284.707 251.317 285.507C253.817 286.507 254.817 287.007 256.317 287.507C257.817 288.007 268.317 269.507 271.317 250.507C273.717 235.307 294.984 148.84 305.317 107.507C302.484 140.007 296.917 207.607 297.317 218.007C297.717 228.407 300.15 245.34 301.317 252.507L305.317 254.007C311.484 244.84 324.617 222.107 327.817 204.507C331.017 186.907 346.484 128.507 353.817 101.507L349.317 192.507L350.817 218.007L357.817 254.007L368.817 282.007C372.317 287.34 381.417 298.907 389.817 302.507C398.217 306.107 404.317 304.007 406.317 302.507C407.984 301.173 410.117 296.407 405.317 288.007C400.517 279.607 377.65 269.173 366.817 265.007C348.65 259.507 307.617 248.907 288.817 250.507L253.817 247.507L195.317 249.007L107.817 256.507L143.317 250.507L218.817 246.007L291.817 240.007L375.317 233.507C440.984 228.507 567.417 221.107 547.817 231.507" 
+                                          stroke="#FCA311" 
+                                          stroke-width="3" 
+                                          fill="none"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          shape-rendering="crispEdges"/>
+                                </g>
+                            </svg>
+                        </div>
+                        
                         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary mb-6">
                             Hi, I'm <span class="text-gradient">Ali Youssef</span>
                         </h1>
@@ -391,6 +419,67 @@
                 if (typeof ScrollTrigger !== 'undefined') {
                     gsap.registerPlugin(ScrollTrigger);
                 }
+                
+                // Real-time Signature Signing Animation (Framer Motion style)
+                const signaturePath = document.getElementById('signature-path');
+                const signatureSvg = document.getElementById('signature-svg');
+                
+                if (signaturePath && signatureSvg) {
+                    // Get the total length of the path for animation
+                    const pathLength = signaturePath.getTotalLength();
+                    
+                    // Set initial state
+                    signaturePath.style.strokeDasharray = pathLength;
+                    signaturePath.style.strokeDashoffset = pathLength;
+                    
+                    // Create timeline for smooth sequential animation
+                    const tl = gsap.timeline();
+                    
+                    // Step 1: Fade in the SVG container
+                    tl.to(signatureSvg, {
+                        opacity: 1,
+                        duration: 0.5,
+                        ease: "power2.out"
+                    });
+                    
+                    // Step 2: Animate the signature path drawing (real-time signing effect)
+                    tl.to(signaturePath, {
+                        strokeDashoffset: 0,
+                        duration: 2.5,
+                        ease: "power1.inOut",
+                        onUpdate: function() {
+                            // Add subtle pressure variations during signing
+                            const progress = this.progress();
+                            if (progress > 0.2 && progress < 0.6) {
+                                // Slightly thicker stroke in the middle (more pressure)
+                                signaturePath.style.strokeWidth = "3.5";
+                            } else if (progress > 0.6 && progress < 0.9) {
+                                signaturePath.style.strokeWidth = "3.2";
+                            } else {
+                                signaturePath.style.strokeWidth = "3";
+                            }
+                        },
+                        onComplete: function() {
+                            // Final signature completion effect with glow
+                            gsap.to(signaturePath, {
+                                strokeWidth: "3",
+                                filter: "drop-shadow(0 4px 16px rgba(252, 163, 17, 0.8))",
+                                duration: 0.5,
+                                ease: "power2.out"
+                            });
+                            
+                            // Subtle pulse to show completion
+                            gsap.to(signatureSvg, {
+                                scale: 1.02,
+                                duration: 0.4,
+                                yoyo: true,
+                                repeat: 1,
+                                ease: "power2.inOut"
+                            });
+                        }
+                    });
+                }
+                
                 // Mark fade-in elements as ready for GSAP animation
                 const fadeElements = document.querySelectorAll('.fade-in');
                 fadeElements.forEach(el => {

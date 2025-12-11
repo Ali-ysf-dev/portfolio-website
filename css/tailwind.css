@@ -31,7 +31,7 @@
   --color-background-light: #FFFFFF; /* white */
   
   /* Surface Colors */
-  --color-surface: #1E293B; /* slate-800 */
+  --color-surface: rgb(17, 24, 39); /* Custom dark gray */
   --color-surface-light: #F8FAFC; /* slate-50 */
   --color-surface-hover: #334155; /* slate-700 */
   

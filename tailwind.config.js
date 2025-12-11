@@ -29,7 +29,7 @@ module.exports = {
           light: "#FFFFFF", // white
         },
         surface: {
-          DEFAULT: "#1E293B", // slate-800
+          DEFAULT: "rgb(17, 24, 39)", // Custom dark gray
           light: "#F8FAFC", // slate-50
           hover: "#334155", // slate-700
         },

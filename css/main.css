@@ -1375,7 +1375,7 @@ button, a, input, select, textarea {
 
 .bg-surface{
   --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity, 1));
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
 }
 
 .bg-surface-hover{
@@ -1384,11 +1384,11 @@ button, a, input, select, textarea {
 }
 
 .bg-surface\/30{
-  background-color: rgb(30 41 59 / 0.3);
+  background-color: rgb(17 24 39 / 0.3);
 }
 
 .bg-surface\/50{
-  background-color: rgb(30 41 59 / 0.5);
+  background-color: rgb(17 24 39 / 0.5);
 }
 
 .bg-warning{
@@ -1868,7 +1868,7 @@ button, a, input, select, textarea {
   --color-background-light: #FFFFFF;
   /* white */
   /* Surface Colors */
-  --color-surface: #1E293B;
+  --color-surface: rgb(17, 24, 39);
   /* slate-800 */
   --color-surface-light: #F8FAFC;
   /* slate-50 */
@@ -2276,4 +2276,34 @@ button, a, input, select, textarea {
 #announcement-banner p {
   color: #000000 !important;
   font-weight: 700;
+}
+
+/* Signature Styles with Real-time Signing Animation */
+.signature-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.signature-svg {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  filter: drop-shadow(0 4px 12px rgba(252, 163, 17, 0.6));
+}
+
+#signature-path {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  transition: filter 0.3s ease-out;
+}
+
+[data-theme="dark"] .signature-svg {
+  filter: drop-shadow(0 4px 12px rgba(252, 163, 17, 0.8));
+}
+
+@media (max-width: 768px) {
+  .signature-svg {
+    width: 300px;
+  }
 }
