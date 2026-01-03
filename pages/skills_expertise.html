@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills & Expertise - Ali Youssef</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Faliportfo1513back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 liquid-glass-navbar">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <a href="home_landing_page.html" class="text-xl font-bold text-gradient">Ali Youssef</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="home_landing_page.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Home</a>
+                        <a href="about_page.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">About</a>
+                        <a href="projects_portfolio.html" style="display: none;" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Projects</a>
+                        <a href="skills_expertise.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Skills</a>
+                        <a href="services.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Services</a>
+                        <a href="contact.html" class="nav-link text-text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium relative">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Theme Toggle & Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-surface hover:bg-surface-hover transition-colors duration-200" aria-label="Toggle theme">
+                        <svg id="sun-icon" class="w-5 h-5 text-text-secondary hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                        <svg id="moon-icon" class="w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg bg-surface hover:bg-surface-hover transition-colors duration-200" aria-label="Toggle mobile menu">
+                        <svg class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-surface rounded-lg mt-2">
+                    <a href="home_landing_page.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Home</a>
+                    <a href="about_page.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">About</a>
+                    <a href="projects_portfolio.html" style="display: none;" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Projects</a>
+                    <a href="skills_expertise.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Skills</a>
+                    <a href="services.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Services</a>
+                    <a href="contact.html" class="nav-link text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 relative">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-primary/20">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="fade-in">
+                <h1 class="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
+                    Skills & <span class="text-gradient">Expertise</span>
+                </h1>
+                <p class="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                    A comprehensive overview of my technical competencies, tools, and professional capabilities 
+                    developed through years of frontend development experience.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Filter & Search -->
+    <section class="py-8 px-4 sm:px-6 lg:px-8 border-b border-border">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-4 items-center justify-between">
+                <!-- Search Bar -->
+                <div class="relative flex-1 max-w-md">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <input type="text" id="skill-search" placeholder="Search skills..." class="block w-full pl-10 pr-3 py-2 border border-border rounded-lg bg-surface text-text-primary placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+                </div>
+
+                <!-- Category Filter Tabs -->
+                <div class="flex flex-wrap gap-2">
+                    <button class="skill-filter-btn active px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200" data-category="all">
+                        All Skills
+                    </button>
+                    <button class="skill-filter-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200" data-category="frontend">
+                        Frontend
+                    </button>
+                    <button class="skill-filter-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200" data-category="backend">
+                        Backend
+                    </button>
+                    <button class="skill-filter-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200" data-category="tools">
+                        Tools
+                    </button>
+                    <button class="skill-filter-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200" data-category="soft">
+                        Soft Skills
+                    </button>
+                </div>
+
+                <!-- Sort Options -->
+                <div class="flex items-center gap-2">
+                    <label for="sort-select" class="text-sm text-text-secondary">Sort by:</label>
+                    <select id="sort-select" class="px-3 py-2 border border-border rounded-lg bg-surface text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+                        <option value="name">Name</option>
+                        <option value="proficiency">Proficiency</option>
+                        <option value="experience">Experience</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Grid -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Frontend Technologies -->
+            <div class="skill-category mb-16" data-category="frontend">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-text-primary">Frontend Technologies</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- React -->
+                    <div class="skill-card card p-6" data-skill="react" data-proficiency="90" data-experience="2">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">React</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">2+ years</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">90%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full progress-bar" style="width: 0%" data-width="90"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Component-based UI library for building scalable web applications</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Hooks</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">JSX</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">State Management</span>
+                        </div>
+                    </div>
+
+                    <!-- HTML -->
+                    <div class="skill-card card p-6" data-skill="html" data-proficiency="95" data-experience="2">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">HTML</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">2+ years</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">95%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full progress-bar" style="width: 0%" data-width="95"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Semantic markup and modern HTML5 features for web development</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Semantic HTML</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Accessibility</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Forms</span>
+                        </div>
+                    </div>
+
+                    <!-- CSS3 -->
+                    <div class="skill-card card p-6" data-skill="css3" data-proficiency="92" data-experience="2">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">CSS3</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">2+ years</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">92%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full progress-bar" style="width: 0%" data-width="92"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Advanced styling with modern CSS features and responsive design</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Flexbox</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Grid</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Animations</span>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="skill-card card p-6" data-skill="javascript" data-proficiency="88" data-experience="2">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">JavaScript</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-warning/10 text-warning text-xs rounded-full">2+ years</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">88%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-warning h-2 rounded-full progress-bar" style="width: 0%" data-width="88"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Modern JavaScript ES6+ for dynamic web applications</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">ES6+</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">DOM</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">APIs</span>
+                        </div>
+                    </div>
+
+                    <!-- Tailwind CSS -->
+                    <div class="skill-card card p-6" data-skill="tailwind" data-proficiency="85" data-experience="1">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://api.iconify.design/devicon:tailwindcss.svg" alt="Tailwind CSS" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">Tailwind CSS</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded-full">1+ year</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">85%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full progress-bar" style="width: 0%" data-width="85"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Utility-first CSS framework for rapid UI development</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Utilities</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Components</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Responsive</span>
+                        </div>
+                    </div>
+
+                    <!-- Bootstrap -->
+                    <div class="skill-card card p-6" data-skill="bootstrap" data-proficiency="80" data-experience="1">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">Bootstrap</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-secondary/10 text-secondary text-xs rounded-full">1+ year</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">80%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-secondary h-2 rounded-full progress-bar" style="width: 0%" data-width="80"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">CSS framework for responsive web development</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Grid System</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Components</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Knowledge -->
+            <div class="skill-category mb-16" data-category="backend">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-text-primary">Backend Knowledge</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Python -->
+                    <div class="skill-card card p-6" data-skill="python" data-proficiency="75" data-experience="1">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">Python</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded-full">1+ year</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">75%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full progress-bar" style="width: 0%" data-width="75"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Versatile programming language for backend development</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">FastAPI</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Django</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">APIs</span>
+                        </div>
+                    </div>
+
+                    <!-- Node.js -->
+                    <div class="skill-card card p-6" data-skill="nodejs" data-proficiency="70" data-experience="1">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">Node.js</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded-full">1+ year</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">70%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full progress-bar" style="width: 0%" data-width="70"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">JavaScript runtime for server-side development</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Express.js</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">NPM</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">APIs</span>
+                        </div>
+                    </div>
+
+                    <!-- MySQL -->
+                    <div class="skill-card card p-6" data-skill="mysql" data-proficiency="80" data-experience="2">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">MySQL</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-secondary/10 text-secondary text-xs rounded-full">2+ years</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">80%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-secondary h-2 rounded-full progress-bar" style="width: 0%" data-width="80"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Relational database management system</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Queries</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Schema Design</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Optimization</span>
+                        </div>
+                    </div>
+
+                    <!-- SQL -->
+                    <div class="skill-card card p-6" data-skill="sql" data-proficiency="85" data-experience="2">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <svg class="w-8 h-8 mr-3 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+                                </svg>
+                                <h3 class="text-lg font-semibold text-text-primary">SQL</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-secondary/10 text-secondary text-xs rounded-full">2+ years</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">85%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-secondary h-2 rounded-full progress-bar" style="width: 0%" data-width="85"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Structured Query Language for database operations</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Complex Queries</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Joins</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Stored Procedures</span>
+                        </div>
+                    </div>
+
+                    <!-- PHP -->
+                    <div class="skill-card card p-6" data-skill="php" data-proficiency="75" data-experience="1">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">PHP</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-warning/10 text-warning text-xs rounded-full">1+ year</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">75%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-warning h-2 rounded-full progress-bar" style="width: 0%" data-width="75"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Server-side scripting language for web development</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">MVC</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">APIs</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Frameworks</span>
+                        </div>
+                    </div>
+
+                    <!-- FastAPI -->
+                    <div class="skill-card card p-6" data-skill="fastapi" data-proficiency="70" data-experience="1">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <svg class="w-8 h-8 mr-3 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                                <h3 class="text-lg font-semibold text-text-primary">FastAPI</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded-full">1+ year</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">70%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full progress-bar" style="width: 0%" data-width="70"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Modern Python web framework for building APIs</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">REST APIs</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Async</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">OpenAPI</span>
+                        </div>
+                    </div>
+
+                    <!-- PostgreSQL -->
+                    <div class="skill-card card p-6" data-skill="postgres" data-proficiency="65" data-experience="1">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">PostgreSQL</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded-full">1+ year</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">65%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full progress-bar" style="width: 0%" data-width="65"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Advanced open-source relational database</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">ACID</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">JSON</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Performance</span>
+                        </div>
+                    </div>
+
+                    <!-- MongoDB -->
+                    <div class="skill-card card p-6" data-skill="mongodb" data-proficiency="60" data-experience="1">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">MongoDB</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-warning/10 text-warning text-xs rounded-full">1+ year</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">60%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-warning h-2 rounded-full progress-bar" style="width: 0%" data-width="60"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">NoSQL document database for modern applications</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Documents</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Aggregation</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Atlas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Workflow -->
+            <div class="skill-category mb-16" data-category="tools">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-text-primary">Tools & Workflow</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- JIRA -->
+                    <div class="skill-card card p-6" data-skill="jira" data-proficiency="85" data-experience="1">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <svg class="w-8 h-8 mr-3 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M11.53 2c0 2.4 1.97 4.37 4.37 4.37h.45v-.45c0-2.4-1.97-4.37-4.37-4.37h-.45v.45zm-.82 4.37c0 2.4 1.97 4.37 4.37 4.37h.45v-.45c0-2.4-1.97-4.37-4.37-4.37h-.45v.45zm-4.37 4.37c0 2.4 1.97 4.37 4.37 4.37h.45v-.45c0-2.4-1.97-4.37-4.37-4.37h-.45v.45zm8.74-4.37c0 2.4 1.97 4.37 4.37 4.37h.45v-.45c0-2.4-1.97-4.37-4.37-4.37h-.45v.45z"/>
+                                </svg>
+                                <h3 class="text-lg font-semibold text-text-primary">JIRA</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">1+ year</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">85%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full progress-bar" style="width: 0%" data-width="85"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Project management and issue tracking for agile teams</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Scrum</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Kanban</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Reporting</span>
+                        </div>
+                    </div>
+
+                    <!-- VS Code -->
+                    <div class="skill-card card p-6" data-skill="vscode" data-proficiency="90" data-experience="2">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">VS Code</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">2+ years</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">90%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full progress-bar" style="width: 0%" data-width="90"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Advanced code editor with powerful extensions and debugging</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Extensions</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Debugging</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">IntelliSense</span>
+                        </div>
+                    </div>
+
+                    <!-- Visual Studio -->
+                    <div class="skill-card card p-6" data-skill="visual-studio" data-proficiency="75" data-experience="1">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="Visual Studio" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">Visual Studio</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-secondary/10 text-secondary text-xs rounded-full">1+ year</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">75%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-secondary h-2 rounded-full progress-bar" style="width: 0%" data-width="75"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Integrated development environment for .NET applications</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Debugging</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">NuGet</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">.NET</span>
+                        </div>
+                    </div>
+
+                    <!-- Git -->
+                    <div class="skill-card card p-6" data-skill="git" data-proficiency="85" data-experience="2">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">Git</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded-full">2+ years</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">85%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full progress-bar" style="width: 0%" data-width="85"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Distributed version control system for tracking changes</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Branching</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Merging</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Workflows</span>
+                        </div>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="skill-card card p-6" data-skill="github" data-proficiency="85" data-experience="2">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">GitHub</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">2+ years</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">85%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full progress-bar" style="width: 0%" data-width="85"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Code hosting platform with collaboration features</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Pull Requests</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Issues</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Actions</span>
+                        </div>
+                    </div>
+
+                    <!-- Postman -->
+                    <div class="skill-card card p-6" data-skill="postman" data-proficiency="80" data-experience="1">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <svg class="w-8 h-8 mr-3 text-warning" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M13.527.099C6.955-.744.942 3.9.099 10.473c-.843 6.572 3.8 12.584 10.373 13.428 6.573.843 12.587-3.801 13.428-10.374C24.744 6.955 20.101.943 13.527.099z"/>
+                                </svg>
+                                <h3 class="text-lg font-semibold text-text-primary">Postman</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-warning/10 text-warning text-xs rounded-full">1+ year</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">80%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-warning h-2 rounded-full progress-bar" style="width: 0%" data-width="80"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">API development and testing platform</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">API Testing</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Collections</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Environment</span>
+                        </div>
+                    </div>
+
+                    <!-- XAMPP -->
+                    <div class="skill-card card p-6" data-skill="xampp" data-proficiency="75" data-experience="1">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <svg class="w-8 h-8 mr-3 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2z"/>
+                                </svg>
+                                <h3 class="text-lg font-semibold text-text-primary">XAMPP</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded-full">1+ year</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">75%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full progress-bar" style="width: 0%" data-width="75"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Local development environment for web applications</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Apache</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">MySQL</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="skill-category mb-16" data-category="soft">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-12 bg-warning/10 rounded-xl flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-text-primary">Soft Skills</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Problem Solving -->
+                    <div class="skill-card card p-6" data-skill="problem-solving" data-proficiency="90" data-experience="2">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <svg class="w-8 h-8 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                                <h3 class="text-lg font-semibold text-text-primary">Problem Solving</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">Expert</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">90%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full progress-bar" style="width: 0%" data-width="90"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Analytical thinking and creative solutions for complex technical challenges</p>
+                    </div>
+
+                    <!-- Communication -->
+                    <div class="skill-card card p-6" data-skill="communication" data-proficiency="85" data-experience="2">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <svg class="w-8 h-8 mr-3 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                </svg>
+                                <h3 class="text-lg font-semibold text-text-primary">Communication</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Expert</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">85%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-secondary h-2 rounded-full progress-bar" style="width: 0%" data-width="85"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Clear technical communication with team members and stakeholders</p>
+                    </div>
+
+                    <!-- Time Management -->
+                    <div class="skill-card card p-6" data-skill="time-management" data-proficiency="88" data-experience="2">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <svg class="w-8 h-8 mr-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <h3 class="text-lg font-semibold text-text-primary">Time Management</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded-full">Expert</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">88%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full progress-bar" style="width: 0%" data-width="88"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Effective project scheduling and deadline management</p>
+                    </div>
+
+                    <!-- Adaptability -->
+                    <div class="skill-card card p-6" data-skill="adaptability" data-proficiency="92" data-experience="2">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <svg class="w-8 h-8 mr-3 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                                </svg>
+                                <h3 class="text-lg font-semibold text-text-primary">Adaptability</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-warning/10 text-warning text-xs rounded-full">Expert</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">92%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-warning h-2 rounded-full progress-bar" style="width: 0%" data-width="92"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Quick learning and adaptation to new technologies and methodologies</p>
+                    </div>
+
+                    <!-- Leadership -->
+                    <div class="skill-card card p-6" data-skill="leadership" data-proficiency="80" data-experience="1">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <svg class="w-8 h-8 mr-3 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                </svg>
+                                <h3 class="text-lg font-semibold text-text-primary">Leadership</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded-full">Proficient</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Proficiency</span>
+                                <span class="text-text-primary font-medium">80%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full progress-bar" style="width: 0%" data-width="80"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Project leadership and team coordination in agile environments</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Currently Learning -->
+            <div class="skill-category mb-16 hidden">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-12 bg-success/10 rounded-xl flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-text-primary">Currently Learning</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Next.js -->
+                    <div class="card p-6 border-2 border-success/20">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">Next.js</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded-full">Learning</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Progress</span>
+                                <span class="text-text-primary font-medium">40%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full progress-bar" style="width: 0%" data-width="40"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">React framework with SSR, SSG, and full-stack capabilities</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded">SSR</span>
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded">SSG</span>
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded">API Routes</span>
+                        </div>
+                    </div>
+
+                    <!-- Docker -->
+                    <div class="card p-6 border-2 border-success/20">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">Docker</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded-full">Learning</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Progress</span>
+                                <span class="text-text-primary font-medium">25%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full progress-bar" style="width: 0%" data-width="25"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Containerization platform for application deployment</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded">Containers</span>
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded">Images</span>
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded">Compose</span>
+                        </div>
+                    </div>
+
+                    <!-- AWS -->
+                    <div class="card p-6 border-2 border-success/20">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" class="w-8 h-8 mr-3" />
+                                <h3 class="text-lg font-semibold text-text-primary">AWS</h3>
+                            </div>
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded-full">Learning</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-text-secondary">Progress</span>
+                                <span class="text-text-primary font-medium">30%</span>
+                            </div>
+                            <div class="w-full bg-surface-hover rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full progress-bar" style="width: 0%" data-width="30"></div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-secondary">Cloud computing platform and services</p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded">EC2</span>
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded">S3</span>
+                            <span class="px-2 py-1 bg-success/10 text-success text-xs rounded">Lambda</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-primary/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
+                    Certifications & Achievements
+                </h2>
+                <p class="text-lg text-text-secondary">
+                    Professional certifications and notable achievements
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- FreeCodeCamp -->
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0 2c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary mb-2">Responsive Web Design</h3>
+                    <p class="text-sm text-text-secondary mb-3">FreeCodeCamp</p>
+                    <div class="flex items-center justify-center mb-4">
+                        <svg class="w-4 h-4 text-success mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="text-sm text-success">Verified</span>
+                    </div>
+                    <a href="#" class="text-primary hover:text-primary-600 text-sm transition-colors duration-200">View Certificate</a>
+                </div>
+
+                <!-- JavaScript Algorithms -->
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-warning/10 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-warning" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0 2c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary mb-2">JavaScript Algorithms</h3>
+                    <p class="text-sm text-text-secondary mb-3">FreeCodeCamp</p>
+                    <div class="flex items-center justify-center mb-4">
+                        <svg class="w-4 h-4 text-success mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="text-sm text-success">Verified</span>
+                    </div>
+                    <a href="#" class="text-primary hover:text-primary-600 text-sm transition-colors duration-200">View Certificate</a>
+                </div>
+
+                <!-- Frontend Libraries -->
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-secondary/10 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0 2c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary mb-2">Frontend Libraries</h3>
+                    <p class="text-sm text-text-secondary mb-3">FreeCodeCamp</p>
+                    <div class="flex items-center justify-center mb-4">
+                        <svg class="w-4 h-4 text-success mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="text-sm text-success">Verified</span>
+                    </div>
+                    <a href="#" class="text-primary hover:text-primary-600 text-sm transition-colors duration-200">View Certificate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Export -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-text-primary mb-6">
+                Skills Summary
+            </h2>
+            <p class="text-lg text-text-secondary mb-8">
+                Download a comprehensive overview of my technical skills and experience for your review.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button id="export-pdf" class="btn-primary inline-flex items-center justify-center">
+                    <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Download Skills PDF
+                </button>
+                <a href="contact.html" class="btn-secondary items-center justify-center hidden">
+                    <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                    </svg>
+                    Discuss My Skills
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-border py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-text-secondary">
+                © 2025 Ali Youssef. All rights reserved. Built with passion and modern web technologies.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo(0, 0);
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }
+        
+        // Scroll immediately
+        scrollToTop();
+        
+        // Scroll on DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', function() {
+            scrollToTop();
+        });
+        
+        // Scroll on page load
+        window.addEventListener('load', function() {
+            scrollToTop();
+        });
+        
+        // Scroll on page show (for back/forward navigation)
+        window.addEventListener('pageshow', function(event) {
+            scrollToTop();
+        });
+        
+        // Also scroll to top immediately if page is already loaded
+        if (document.readyState === 'complete') {
+            scrollToTop();
+        }
+        
+        // GSAP Page Animations - Safe implementation that doesn't hide content
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set active nav link based on current page
+            const currentPage = window.location.pathname.split('/').pop() || 'home_landing_page.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute('href');
+                if (linkHref === currentPage || (currentPage === '' && linkHref === 'home_landing_page.html')) {
+                    link.classList.add('active');
+                }
+            });
+            
+            if (typeof gsap !== 'undefined') {
+                // Register ScrollTrigger plugin if available
+                if (typeof ScrollTrigger !== 'undefined') {
+                    gsap.registerPlugin(ScrollTrigger);
+                }
+                const fadeElements = document.querySelectorAll('.fade-in');
+                fadeElements.forEach(el => {
+                    el.classList.add('gsap-ready');
+                    if (!el.classList.contains('visible')) {
+                        gsap.set(el, { opacity: 0, y: 30 });
+                    }
+                });
+                
+                if (fadeElements.length > 0) {
+                    fadeElements.forEach((el, index) => {
+                        if (!el.classList.contains('visible')) {
+                            gsap.to(el, {
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.8,
+                                delay: index * 0.1,
+                                ease: "power2.out",
+                                onComplete: function() {
+                                    el.classList.add('visible');
+                                }
+                            });
+                        } else {
+                            gsap.set(el, { opacity: 1, y: 0 });
+                        }
+                    });
+                }
+                
+                // Progress Bar Animation on Scroll
+                const progressBars = document.querySelectorAll('.bg-surface-hover.rounded-full');
+                if (progressBars.length > 0) {
+                    const progressObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !entry.target.classList.contains('progress-animated')) {
+                                const width = entry.target.style.width || '0%';
+                                const targetWidth = width;
+                                entry.target.style.width = '0%';
+                                
+                                gsap.to(entry.target, {
+                                    width: targetWidth,
+                                    duration: 1.5,
+                                    ease: "power2.out",
+                                    onComplete: function() {
+                                        entry.target.classList.add('progress-animated');
+                                    }
+                                });
+                                progressObserver.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.5 });
+                    
+                    progressBars.forEach(bar => {
+                        progressObserver.observe(bar);
+                    });
+                }
+                
+                // Simple Modern Button Hover Effect
+                const buttons = document.querySelectorAll('.btn-primary, .btn-secondary, .skill-filter-btn');
+                buttons.forEach(button => {
+                    button.addEventListener('mouseenter', () => {
+                        gsap.to(button, {
+                            scale: 1.05,
+                            y: -2,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                    
+                    button.addEventListener('mouseleave', () => {
+                        gsap.to(button, {
+                            scale: 1,
+                            y: 0,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                });
+                
+                // Simple Card Animation - Same as Services/Contact pages
+                const cards = document.querySelectorAll('.card');
+                if (cards.length > 0) {
+                    const cardObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !entry.target.classList.contains('gsap-animated')) {
+                                gsap.from(entry.target, {
+                                    opacity: 0,
+                                    y: 30,
+                                    duration: 0.6,
+                                    ease: "power2.out",
+                                    onComplete: function() {
+                                        entry.target.classList.add('gsap-animated');
+                                    }
+                                });
+                                cardObserver.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    
+                    cards.forEach(card => {
+                        gsap.set(card, { opacity: 1, y: 0 });
+                        
+                        // Simple Modern Card Hover Effect
+                        card.addEventListener('mouseenter', () => {
+                            gsap.to(card, {
+                                y: -4,
+                                scale: 1.02,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                            
+                            // Animate skill icon
+                            const icon = card.querySelector('img, svg');
+                            if (icon) {
+                                gsap.to(icon, {
+                                    scale: 1.1,
+                                    rotation: 5,
+                                    duration: 0.2,
+                                    ease: "power2.out"
+                                });
+                            }
+                        });
+                        
+                        card.addEventListener('mouseleave', () => {
+                            gsap.to(card, {
+                                y: 0,
+                                scale: 1,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                            
+                            const icon = card.querySelector('img, svg');
+                            if (icon) {
+                                gsap.to(icon, {
+                                    scale: 1,
+                                    rotation: 0,
+                                    duration: 0.2,
+                                    ease: "power2.out"
+                                });
+                            }
+                        });
+                        
+                        cardObserver.observe(card);
+                    });
+                }
+                
+                // Skill Filter Buttons Hover
+                const filterButtons = document.querySelectorAll('.skill-filter-btn, .filter-chip');
+                filterButtons.forEach(btn => {
+                    btn.addEventListener('mouseenter', () => {
+                        gsap.to(btn, {
+                            scale: 1.05,
+                            y: -2,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                    
+                    btn.addEventListener('mouseleave', () => {
+                        gsap.to(btn, {
+                            scale: 1,
+                            y: 0,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                });
+                
+                // Navigation Links Hover Effect
+                const navLinks = document.querySelectorAll('nav a');
+                navLinks.forEach(link => {
+                    link.addEventListener('mouseenter', () => {
+                        gsap.to(link, {
+                            y: -2,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                    
+                    link.addEventListener('mouseleave', () => {
+                        gsap.to(link, {
+                            y: 0,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        });
+                    });
+                });
+                
+                // Theme Toggle & Mobile Menu Button Hover
+                const themeToggle = document.getElementById('theme-toggle');
+                const mobileMenuBtn = document.getElementById('mobile-menu-button');
+                
+                [themeToggle, mobileMenuBtn].forEach(btn => {
+                    if (btn) {
+                        btn.addEventListener('mouseenter', () => {
+                            gsap.to(btn, {
+                                scale: 1.1,
+                                rotation: 5,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                        });
+                        
+                        btn.addEventListener('mouseleave', () => {
+                            gsap.to(btn, {
+                                scale: 1,
+                                rotation: 0,
+                                duration: 0.2,
+                                ease: "power2.out"
+                            });
+                        });
+                    }
+                });
+                
+                // Simple Section Title Animation - Same as Services/Contact pages
+                // Exclude h1 inside fade-in divs (they use fade-in animation instead)
+                const sectionTitles = document.querySelectorAll('section h3, section h2, section h1:not(.fade-in h1)');
+                sectionTitles.forEach((title) => {
+                    // Skip if inside a fade-in container
+                    if (title.closest('.fade-in')) {
+                        return;
+                    }
+                    
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !entry.target.classList.contains('title-animated')) {
+                                gsap.from(entry.target, {
+                                    opacity: 0,
+                                    y: 30,
+                                    duration: 0.6,
+                                    ease: "power2.out",
+                                    onComplete: function() {
+                                        entry.target.classList.add('title-animated');
+                                    }
+                                });
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    
+                    observer.observe(title);
+                });
+            }
+        });
+
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to 'dark'
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', currentTheme);
+        updateThemeIcons(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcons(newTheme);
+        });
+
+        function updateThemeIcons(theme) {
+            if (theme === 'dark') {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Skills Filter Functionality
+        const filterButtons = document.querySelectorAll('.skill-filter-btn');
+        const skillCards = document.querySelectorAll('.skill-card');
+        const skillCategories = document.querySelectorAll('.skill-category');
+        const searchInput = document.getElementById('skill-search');
+        const sortSelect = document.getElementById('sort-select');
+
+        // Filter by category
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const category = button.dataset.category;
+                filterSkills(category);
+            });
+        });
+
+        // Search functionality
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            filterSkillsBySearch(searchTerm);
+        });
+
+        // Sort functionality
+        sortSelect.addEventListener('change', (e) => {
+            const sortBy = e.target.value;
+            sortSkills(sortBy);
+        });
+
+        function filterSkills(category) {
+            if (category === 'all') {
+                skillCategories.forEach(cat => cat.style.display = 'block');
+            } else {
+                skillCategories.forEach(cat => {
+                    if (cat.dataset.category === category) {
+                        cat.style.display = 'block';
+                    } else {
+                        cat.style.display = 'none';
+                    }
+                });
+            }
+        }
+
+        function filterSkillsBySearch(searchTerm) {
+            skillCards.forEach(card => {
+                const skillName = card.dataset.skill.toLowerCase();
+                const skillText = card.textContent.toLowerCase();
+                
+                if (skillName.includes(searchTerm) || skillText.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function sortSkills(sortBy) {
+            const containers = document.querySelectorAll('.skill-category .grid');
+            
+            containers.forEach(container => {
+                const cards = Array.from(container.querySelectorAll('.skill-card'));
+                
+                cards.sort((a, b) => {
+                    switch(sortBy) {
+                        case 'name':
+                            return a.dataset.skill.localeCompare(b.dataset.skill);
+                        case 'proficiency':
+                            return parseInt(b.dataset.proficiency) - parseInt(a.dataset.proficiency);
+                        case 'experience':
+                            return parseInt(b.dataset.experience) - parseInt(a.dataset.experience);
+                        default:
+                            return 0;
+                    }
+                });
+                
+                // Re-append sorted cards
+                cards.forEach(card => container.appendChild(card));
+            });
+        }
+
+        // Progress bar animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.progress-bar');
+                    progressBars.forEach(bar => {
+                        const width = bar.dataset.width;
+                        setTimeout(() => {
+                            bar.style.width = width + '%';
+                        }, 100);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe all skill cards
+        document.querySelectorAll('.skill-card, .card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Filter button styling
+        function updateFilterButtonStyles() {
+            filterButtons.forEach(btn => {
+                if (btn.classList.contains('active')) {
+                    btn.classList.add('bg-primary', 'text-white');
+                    btn.classList.remove('bg-surface', 'text-text-secondary', 'hover:bg-surface-hover');
+                } else {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('bg-surface', 'text-text-secondary', 'hover:bg-surface-hover');
+                }
+            });
+        }
+
+        // Initialize filter button styles
+        updateFilterButtonStyles();
+
+        // Update styles when buttons are clicked
+        filterButtons.forEach(button => {
+            button.addEventListener('click', updateFilterButtonStyles);
+        });
+
+        // Export PDF functionality (placeholder)
+        document.getElementById('export-pdf').addEventListener('click', () => {
+            alert('PDF export functionality would be implemented here. This would generate a comprehensive skills summary document.');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
