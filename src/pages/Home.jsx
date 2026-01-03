@@ -1,8 +1,9 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion } from 'framer-motion'
+import { fetchGitHubRepos } from '../utils/github'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -37,54 +38,17 @@ const Home = () => {
   const cardRefs = useRef([])
   const projectCardRefs = useRef([])
 
-  // Featured projects for home page
-  const featuredProjects = [
-    {
-      id: 1,
-      title: 'Firdaus Website',
-      shortDescription: 'Modern website developed using React.js with improved UI/UX design and SEO optimization.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      tags: ['react', 'javascript', 'frontend', 'freelance'],
-      featured: true,
-      liveUrl: '#',
-      codeUrl: '#'
-    },
-    {
-      id: 2,
-      title: 'LA ROCHE Hotel System',
-      shortDescription: 'Complete hotel reservation system with user-friendly UI/UX interface and back-end functionality.',
-      image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      tags: ['vbnet', 'sql', 'fullstack', 'freelance'],
-      featured: false,
-      liveUrl: '#',
-      codeUrl: '#'
-    },
-    {
-      id: 3,
-      title: 'XLR8 Medical Web App',
-      shortDescription: 'Medical machine web application where I served as Product Owner at White Stork.',
-      image: 'https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      tags: ['product-owner', 'medical', 'webapp', 'scrum'],
-      featured: false,
-      liveUrl: '#',
-      codeUrl: '#'
-    },
-    {
-      id: 4,
-      title: 'MEDIS Pharmacy App',
-      shortDescription: 'Mobile pharmacy application where I served as Product Owner at White Stork.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      tags: ['product-owner', 'mobile', 'pharmacy', 'scrum'],
-      featured: false,
-      liveUrl: '#',
-      codeUrl: '#'
-    }
-  ]
+  // State for GitHub projects
+  const [githubProjects, setGithubProjects] = useState([])
+  const [loadingProjects, setLoadingProjects] = useState(true)
 
   const getTagColor = (tag) => {
     const colorMap = {
       'react': 'primary',
       'javascript': 'warning',
+      'typescript': 'primary',
+      'html': 'warning',
+      'css': 'secondary',
       'frontend': 'primary',
       'freelance': 'accent',
       'featured': 'primary',
@@ -99,10 +63,33 @@ const Home = () => {
       'pharmacy': 'secondary',
       'php': 'warning',
       'graduation': 'success',
-      'academic': 'success'
+      'academic': 'success',
+      'java': 'warning',
+      'python': 'secondary',
+      'vue': 'success',
+      'angular': 'primary',
+      'node': 'success',
+      'express': 'accent'
     }
-    return colorMap[tag] || 'accent'
+    return colorMap[tag.toLowerCase()] || 'accent'
   }
+
+  // Fetch GitHub projects on component mount
+  useEffect(() => {
+    const loadGitHubProjects = async () => {
+      setLoadingProjects(true)
+      try {
+        const repos = await fetchGitHubRepos(8, 'updated') // Fetch 8 most recently updated repos
+        setGithubProjects(repos)
+      } catch (error) {
+        console.error('Failed to load GitHub projects:', error)
+      } finally {
+        setLoadingProjects(false)
+      }
+    }
+    
+    loadGitHubProjects()
+  }, [])
 
   useEffect(() => {
     // Scroll to top on mount
@@ -646,95 +633,114 @@ const Home = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary/20">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-primary/20">
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 sm:mb-12">
             <h3 
               className="text-2xl sm:text-3xl font-bold text-text-primary mb-4 fade-in" 
               ref={el => { if (el && !fadeInRefs.current.includes(el)) fadeInRefs.current.push(el) }}
             >
-              Featured Projects
+              My Projects
             </h3>
             <p 
               className="text-lg text-text-secondary fade-in" 
               ref={el => { if (el && !fadeInRefs.current.includes(el)) fadeInRefs.current.push(el) }}
             >
-              Some of my recent work and projects
+              Check out my latest work on GitHub
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {featuredProjects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                className="project-card card overflow-hidden group"
-                ref={el => projectCardRefs.current[index] = el}
-                variants={fadeInUp}
-                whileHover={cardHover}
-              >
-                <div className="relative overflow-hidden">
-                  <div className="aspect-video overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-200 ease-out"
-                      loading="lazy"
-                      onError={(e) => {
-                        e.target.src = 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-                        e.target.onerror = null
-                      }}
-                    />
-                  </div>
-                  {/* Gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none"></div>
-                  {project.featured && (
-                    <div className="absolute top-3 left-3 bg-primary text-white px-2 py-1 rounded-full text-xs font-medium z-10">
-                      Featured
+          {loadingProjects ? (
+            <div className="text-center py-12">
+              <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+              <p className="text-text-secondary mt-4">Loading projects from GitHub...</p>
+            </div>
+          ) : githubProjects.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-text-secondary">No projects found. Please check your GitHub username in config.js</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+              {githubProjects.map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  className="project-card card overflow-hidden group"
+                  ref={el => projectCardRefs.current[index] = el}
+                  variants={fadeInUp}
+                  whileHover={cardHover}
+                >
+                  <div className="relative overflow-hidden">
+                    <div className="aspect-video overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-200 ease-out"
+                        loading="lazy"
+                        onError={(e) => {
+                          e.target.src = 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+                          e.target.onerror = null
+                        }}
+                      />
                     </div>
-                  )}
-                </div>
-                <div className="p-6">
-                  <h4 className="text-xl font-semibold text-text-primary mb-2">{project.title}</h4>
-                  <p className="text-text-secondary mb-4 text-sm">
-                    {project.shortDescription}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.slice(0, 4).map(tag => {
-                      const tagColor = getTagColor(tag)
-                      const tagClasses = {
-                        'primary': 'bg-primary/10 text-primary',
-                        'secondary': 'bg-secondary/10 text-secondary',
-                        'accent': 'bg-accent/10 text-accent',
-                        'warning': 'bg-warning/10 text-warning',
-                        'success': 'bg-green-500/10 text-green-500'
-                      }
-                      return (
-                        <span key={tag} className={`px-3 py-1 ${tagClasses[tagColor] || 'bg-text-secondary/10 text-text-secondary'} text-xs rounded-full`}>
-                          {tag}
-                        </span>
-                      )
-                    })}
+                    {/* Gradient overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none"></div>
+                    {project.stars > 0 && (
+                      <div className="absolute top-3 right-3 bg-primary/90 text-white px-2 py-1 rounded-full text-xs md:text-xs font-medium z-10 flex items-center gap-1">
+                        <svg className="w-3 h-3 md:w-3 md:h-3" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        {project.stars}
+                      </div>
+                    )}
+                    {project.featured && (
+                      <div className="absolute top-3 left-3 bg-primary text-white px-2 py-1 rounded-full text-xs md:text-xs font-medium z-10">
+                        Featured
+                      </div>
+                    )}
                   </div>
-                  <div className="flex gap-2 flex-nowrap">
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1 btn-primary text-center text-sm py-2.5 inline-flex items-center justify-center gap-1.5 whitespace-nowrap min-w-0">
-                      <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                      <span className="truncate">{project.codeUrl ? 'View Live' : 'View Project'}</span>
-                    </a>
-                    {project.codeUrl && (
-                      <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" className="flex-1 btn-secondary text-center text-sm py-2.5 inline-flex items-center justify-center gap-1.5 whitespace-nowrap min-w-0">
-                        <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  <div className="p-6 sm:p-6 md:p-6">
+                    <h4 className="text-xl sm:text-xl md:text-xl font-semibold text-text-primary mb-3 sm:mb-2">{project.title}</h4>
+                    <p className="text-base sm:text-sm md:text-sm text-text-secondary mb-4 line-clamp-2">
+                      {project.shortDescription}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.slice(0, 4).map((tag, tagIndex) => {
+                        const tagColor = getTagColor(tag)
+                        const tagClasses = {
+                          'primary': 'bg-primary/10 text-primary',
+                          'secondary': 'bg-secondary/10 text-secondary',
+                          'accent': 'bg-accent/10 text-accent',
+                          'warning': 'bg-warning/10 text-warning',
+                          'success': 'bg-green-500/10 text-green-500'
+                        }
+                        return (
+                          <span key={`${project.id}-${tag}-${tagIndex}`} className={`px-3 sm:px-3 md:px-3 py-1.5 sm:py-1 md:py-1 ${tagClasses[tagColor] || 'bg-text-secondary/10 text-text-secondary'} text-xs sm:text-xs md:text-xs rounded-full`}>
+                            {tag}
+                          </span>
+                        )
+                      })}
+                    </div>
+                    <div className="flex gap-3 sm:gap-2 md:gap-2 flex-nowrap">
+                      {project.liveUrl ? (
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1 btn-primary text-center text-base sm:text-sm md:text-sm py-3 sm:py-2.5 md:py-2.5 inline-flex items-center justify-center gap-1.5 whitespace-nowrap min-w-0">
+                          <svg className="w-5 h-5 sm:w-4 sm:h-4 md:w-4 md:h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          <span className="truncate">Live Demo</span>
+                        </a>
+                      ) : null}
+                      <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" className={`${project.liveUrl ? 'flex-1' : 'w-full'} btn-secondary text-center text-base sm:text-sm md:text-sm py-3 sm:py-2.5 md:py-2.5 inline-flex items-center justify-center gap-1.5 whitespace-nowrap min-w-0`}>
+                        <svg className="w-5 h-5 sm:w-4 sm:h-4 md:w-4 md:h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
                         <span className="truncate">View Code</span>
                       </a>
-                    )}
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
 
         </div>
       </section>

@@ -1815,6 +1815,8 @@ button, a, input, select, textarea {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  image-rendering: high-quality;
+  -ms-interpolation-mode: bicubic;
 }
 
 .hero-section::before {
@@ -1916,6 +1918,8 @@ button, a, input, select, textarea {
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
+  image-rendering: high-quality;
+  -ms-interpolation-mode: bicubic;
 }
 
 /* Sections with colored backgrounds should cover the page background image */
@@ -1956,6 +1960,8 @@ button, a, input, select, textarea {
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
+  image-rendering: high-quality;
+  -ms-interpolation-mode: bicubic;
 }
 
 /* Sections with colored backgrounds should cover the page background image */
@@ -1996,6 +2002,8 @@ button, a, input, select, textarea {
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
+  image-rendering: high-quality;
+  -ms-interpolation-mode: bicubic;
 }
 
 /* Sections with colored backgrounds should cover the page background image */
@@ -2036,6 +2044,8 @@ button, a, input, select, textarea {
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
+  image-rendering: high-quality;
+  -ms-interpolation-mode: bicubic;
 }
 
 /* Sections with colored backgrounds should cover the page background image */
