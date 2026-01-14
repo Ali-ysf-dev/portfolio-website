@@ -54,6 +54,6 @@ export default defineConfig({
       },
     },
   },
-  assetsInclude: ['**/*.PNG', '**/*.png', '**/*.JPG', '**/*.jpg', '**/*.JPEG', '**/*.jpeg'],
+  assetsInclude: ['**/*.PNG', '**/*.png', '**/*.JPG', '**/*.jpg', '**/*.JPEG', '**/*.jpeg', '**/*.otf', '**/*.ttf', '**/*.woff', '**/*.woff2'],
 })
 

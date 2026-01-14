@@ -1,15 +1,9 @@
 {
-  "short_name": "ali_portfolio",
-  "name": "ali_portfolio",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
+  "short_name": "Ali Youssef Portfolio",
+  "name": "Ali Youssef - Frontend React Developer Portfolio",
+  "icons": [],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#1a1a2e",
+  "background_color": "#1a1a2e"
 }
